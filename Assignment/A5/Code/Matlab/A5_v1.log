@@ -1,0 +1,40 @@
+Starting Dynare (version 5.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+pi  		 0
+c   		 200
+m1  		 6866.67
+m2  		 6866.67
+i   		 0.03
+im  		 0
+s   		 3333.33
+chi 		 1
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+       9.073e-12        9.073e-12                0
+            0.97             0.97                0
+          0.9821           0.9821                0
+            1.03             1.03                0
+            1.03             1.03                0
+           1.049            1.049                0
+             Inf              Inf                0
+
+
+There are 4 eigenvalue(s) larger than 1 in modulus 
+for 3 forward-looking variable(s)
+
+The rank condition ISN'T verified!
+
