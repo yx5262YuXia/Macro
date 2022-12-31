@@ -1,0 +1,648 @@
+% Name: Yu Xia's Take Home Exam v2
+% Author: Yu Xia 
+% Description: The version before submitted (to be cont.), after check grammer.
+% Last Updated: Dec 9, 2022
+
+\documentclass{article}
+
+\usepackage{titlesec}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{a4wide}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+
+\usepackage{svg}
+\svgpath{{../figures/}}
+
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily
+}
+
+\lstset{style=mystyle
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+
+\titleformat*{\section}{\Large\rmfamily\bfseries}
+
+\titleformat*{\subsection}{\normalfont\rmfamily}
+
+\titleformat*{\subsubsection}{\normalfont\rmfamily}
+
+\titleformat*{\paragraph}{\normalfont\rmfamily}
+
+\author{Yu Xia \\ ID: yx5262}
+\title{\textbf{Yu Xia's Exam 3}}
+\date{Fall 2022}
+
+\begin{document}
+\maketitle
+
+\nocite{*}
+
+\section{RBC in dynare}
+
+\subsection*{a.}
+
+Consumers maximize his/her utility:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    & \max\sum_{t=0}^{\infty}\beta^{t+s} U_{t+s} \\
+     \textrm{subject to}\\
+    & c_{t}+k_{t}+T_{t}=w_{t}n_{t}+r_{t}k_{t-1}+k_{t-1}\left(1-\delta\right).
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+    & \max\sum_{t=0}^{\infty}\beta^{t}\left(\log\left(c_{t}\right)-\phi n_{t}\right) \\
+     \textrm{subject to}\\
+    & c_{t}+k_{t}+T_{t}-w_{t}n_{t}-r_{t}k_{t-1}-k_{t-1}\left(1-\delta\right)=0.
+    \end{aligned}
+\end{equation*}%
+}}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+The Lagrangian:
+\begin{align*}
+    \quad\mathcal{L} & = \sum_{s=0}^{\infty}\beta^{t+s}\bigl(\left(\log\left(c_{t+s}\right)-\phi n_{t+s}\right)  &\\
+    & \qquad-\lambda_{t}\left(c_{t+s}+k_{t+s}+T_{t+s}-w_{t+s}n_{t+s}-r_{t+s}k_{t+s-1}-k_{t+s-1}\left(1-\delta\right)\right)\bigr) &\\
+    &=\dots+\left(\log\left(c_{t}\right)-\phi n_{t}\right)-\lambda_{t}\left(c_{t}+k_{t}+T_{t}-w_{t}n_{t}-r_{t}k_{t-1}-k_{t-1}\left(1-\delta\right)\right) &\\
+    &\quad+\beta\left(\log\left(c_{t+1}\right)-\phi n_{t+1}\right) &\\
+    &\qquad-\beta\lambda_{t+1}\left(c_{t+1}+k_{t+1}+T_{t+1}-w_{t+1}n_{t+1}-r_{t+1}k_{t}-k_{t}\left(1-\delta\right)\right)+\dots
+\end{align*}%
+}%
+}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+    FOCs:
+
+    w.r.t $c_{t}$:
+    \begin{flalign*} \label{eq:1.1}
+        \dfrac{1}{c_{t}}-\lambda_{t}&=0& \tag{1.2}
+    \end{flalign*}
+
+    w.r.t $n_{t}$:
+    \begin{flalign*} \label{eq:1.2}
+        -\phi+\lambda_{t}w_{t}&=0& \tag{1.2}
+    \end{flalign*}
+
+    w.r.t $k_{t}$:
+    \begin{flalign*} \label{eq:1.3}
+        -\lambda_{t}+\beta\lambda_{t+1}\left(r_{t+1}+\left(1-\delta\right)\right)&=0& \tag{1.3}
+    \end{flalign*}
+    
+    w.r.t $\lambda_{t}$:
+    \begin{flalign*} \label{eq:1.4}
+        c_{t}+k_{t}+T_{t}-w_{t}n_{t}-r_{t}k_{t-1}-k_{t-1}\left(1-\delta\right)&=0& \tag{1.4}
+    \end{flalign*}%
+}%
+}
+
+Derivative w.r.t. $c_{t}$:
+
+$\dfrac{1}{c_{t}}-\lambda_{t}=0$
+
+$\iff$
+
+$\dfrac{1}{c_{t}}=\lambda_{t}$
+
+$\iff$
+
+$c_{t}=\dfrac{1}{\lambda_{t}}$
+
+In other words, the consumer's consumption choice is limited by the budget constraint.
+
+Derivative w.r.t. $c_{t+1}$:
+
+$\dfrac{1}{c_{t+1}}-\lambda_{t+1}=0$
+
+Similar to period $t$, just replaced by $t+1$.
+
+$\iff$
+
+$\dfrac{\dfrac{1}{c_{t}}}{\dfrac{1}{c_{t+1}}}=\dfrac{c_{t+1}}{c_{t}}=\dfrac{\dfrac{1}{\lambda_{t+1}}}{\dfrac{1}{\lambda_{t}}}=\dfrac{\lambda_{t}}{\lambda_{t+1}}$
+
+Derivative w.r.t. $n_{t}$:
+
+$-\phi-\lambda_{t}\left(-w_{t}\right)=0$
+
+$\iff$
+
+$-\phi+\lambda_{t}w_{t}=0$
+
+Consumer's labor choice is determined by the wage.
+
+Derivative w.r.t. $n_{t+1}$:
+
+$-\phi+\lambda_{t+1}w_{t+1}=0$
+
+Similar to period $t$, just replaced by $t+1$.
+
+$\phi=\lambda_{t}w_{t}$
+
+$\iff$
+
+$\dfrac{\phi}{w_{t}}=\lambda_{t}=\dfrac{1}{c_{t}}$
+
+\begin{flalign*} \label{eq:1.5}
+    w_{t}&=\phi c_{t}& \tag{1.5}
+\end{flalign*}
+
+Using across periods:
+
+$\dfrac{\lambda_{t}}{\lambda_{t+1}}=\dfrac{\dfrac{\phi}{w_{t}}}{\dfrac{\phi}{w_{t+1}}}=\dfrac{\dfrac{1}{w_{t}}}{\dfrac{1}{w_{t+1}}}=\dfrac{w_{t+1}}{w_{t}}$
+
+Derivative w.r.t. $\lambda_{t}$:
+
+$c_{t}+k_{t}+T_{t}-w_{t}n_{t}-r_{t}k_{t-1}-k_{t-1}\left(1-\delta\right)=0$
+
+The budget constraint.
+
+Derivative w.r.t. $k_{t}$:
+
+$-\lambda_{t}-\beta\lambda_{t+1}\left(-r_{t+1}-\left(1-\delta\right)\right)=0$
+
+$\iff$
+
+$\beta\lambda_{t+1}\left(r_{t+1}+\left(1-\delta\right)\right)=\lambda_{t}$
+
+$\iff$
+
+$\beta\left(r_{t+1}+\left(1-\delta\right)\right)=\dfrac{\lambda_{t}}{\lambda_{t+1}}$
+
+It suggests that the choice of capital is affected by the real interest rate in the next period and depreciation rate, also the budget constraints in different periods.
+
+Plug into the cross period consumption FOCs we have:
+
+$\dfrac{\dfrac{1}{c_{t}}}{\dfrac{1}{c_{t+1}}}=\dfrac{c_{t+1}}{c_{t}}=\beta\left(r_{t+1}+\left(1-\delta\right)\right)$
+
+\begin{flalign*} \label{eq:1.6}
+    \dfrac{1}{c_{t}}&=\beta\left(r_{t+1}+\left(1-\delta\right)\right)\dfrac{1}{c_{t+1}}& \tag{1.6}
+\end{flalign*}
+
+Plug into the cross period labor FOCs we have:
+
+\begin{flalign*} \label{eq:1.7}
+    \dfrac{1}{w_{t}}&=\beta\left(r_{t+1}+\left(1-\delta\right)\right)\dfrac{1}{w_{t+1}}& \tag{1.7}
+\end{flalign*}
+
+The benefit of waiting one period to consume or work is on the return on capital.
+
+\subsection*{b.}
+
+The firm's problem in each period:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \max_{k_{t-1}, n^{d}_{t}}y_{t}-r_{t}k_{t-1}-w_{t}n^{d}_{t}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \max_{k_{t-1}, n^{d}_{t}}A_{t}\left(k_{t-1}\right)^{\alpha}\left(n^{d}_{t}\right)^{1-\alpha}-r_{t}k_{t-1}-w_{t}n^{d}_{t}
+\end{equation*}%
+}%
+}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+    FOCs:
+
+    w.r.t $k_{t-1}$:
+    \begin{flalign*} \label{eq:1.8}
+        A_{t}\alpha\left(\dfrac{k_{t-1}}{n^{d}_{t}}\right)^{\alpha-1}&=r_{t}& \tag{1.8}
+    \end{flalign*}
+    
+    w.r.t $n^{d}_{t}$:
+    \begin{flalign*} \label{eq:1.9}
+        A_{t}\left(1-\alpha\right)\left(\dfrac{k_{t-1}}{n^{d}_{t}}\right)^{\alpha}&=w_{t}& \tag{1.9}
+    \end{flalign*}%
+}%
+}
+
+Derivative w.r.t. $k_{t-1}$:
+
+$A_{t}\alpha\left(k_{t-1}\right)^{\alpha-1}\left(n^{d}_{t}\right)^{1-\alpha}-r_{t}=0$
+
+$\iff$
+
+$A_{t}\alpha\left(\dfrac{k_{t-1}}{n^{d}_{t}}\right)^{\alpha-1}=r_{t}$
+
+Derivative w.r.t $n^{d}_{t}$:
+
+$A_{t}\left(k_{t-1}\right)^{\alpha}\left(1-\alpha\right)\left(n^{d}_{t}\right)^{-\alpha}-w_{t}=0$
+
+$\iff$
+
+$A_{t}\left(1-\alpha\right)\left(\dfrac{k_{t-1}}{n^{d}_{t}}\right)^{\alpha}=w_{t}$
+
+\subsection*{c.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+    Labor market clearing condition:
+    \begin{flalign*} \label{eq:1.10}
+        n_{t}&=n^{d}_{t}& \tag{1.10}
+    \end{flalign*}
+    Capital clearing condition:
+    \begin{flalign*} \label{eq:1.11}
+        k^{d}_{t}&=k_{t-1}& \tag{1.11}
+    \end{flalign*}
+    GDP identity:
+    \begin{flalign*} \label{eq:1.12}
+        c_{t}+k_{t}+g_{t}&=A_{t}\left(k_{t-1}\right)^{\alpha}\left(n^{d}_{t}\right)^{1-\alpha}+k_{t-1}\left(1-\delta\right)& \tag{1.12}
+    \end{flalign*}%
+}%
+}
+
+In the dynare file:
+
+Endogenous variables: $\boxed{c_{t}, k_{t-1}, k^{d}_{t}, n_{t}, n^{d}_{t}, r_{t}, w_{t}, y_{t}, A_{t}, g_{t}}$.
+
+Exogenous variables: $\boxed{e_{g,t}, e_{t}}$, the government expenditure shock and TFP shock.
+
+Parameter variables: $\boxed{\beta, \delta, \alpha, \theta, \rho, \phi}$.
+
+\subsection*{d.}
+
+\begin{flalign*} \label{eq:1.13}
+    \dfrac{1}{c_{t}}&=\beta\left(E_{t}r_{t+1}+\left(1-\delta\right)\right)E_{t}\dfrac{1}{c_{t+1}}& \tag{1.13}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.5}
+    w_{t}&=\phi c_{t}& \tag{1.5}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.14}
+    A_{t}\alpha\left(\dfrac{k_{t-1}}{n_{t}}\right)^{\alpha-1}&=r_{t}& \tag{1.14}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.15}
+    A_{t}\left(1-\alpha\right)\left(\dfrac{k_{t-1}}{n_{t}}\right)^{\alpha}&=w_{t}& \tag{1.15}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.16}
+    c_{t}+k_{t}+g_{t}&=A_{t}\left(k_{t-1}\right)^{\alpha}\left(n_{t}\right)^{1-\alpha}+k_{t-1}\left(1-\delta\right)& \tag{1.16}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.17}
+    y_{t}&=A_{t}\left(k_{t-1}\right)^{\alpha}\left(n_{t}\right)^{1-\alpha}& \tag{1.17}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.18}
+    g_{t}&=\theta g_{t-1}+e_{g,t}& \tag{1.18}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.19}
+    \log\left(A_{t}\right)&=\rho \log\left(A_{t-1}\right)+e_{t}& \tag{1.19}
+\end{flalign*}
+
+Steady state:
+\begin{flalign*} \label{eq:1.20}
+    A&=1& \tag{1.20}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.21}
+    g&=0& \tag{1.21}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.22}
+    r&=\dfrac{1}{\beta}-\left(1-\delta\right)& \tag{1.22}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.23}
+    c&=\dfrac{r}{\phi}\cdot\dfrac{1-\alpha}{\alpha}\cdot\left(\dfrac{r}{\alpha}\right)^{\frac{1}{\alpha-1}}& \tag{1.23}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.24}
+    w&=\phi c& \tag{1.24}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.25}
+    n&=\dfrac{c}{\left(\dfrac{r}{\alpha}\right)^{\frac{\alpha}{\alpha-1}}-\delta\left(\dfrac{r}{\alpha}\right)^{\frac{1}{\alpha-1}}}& \tag{1.25}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.26}
+    k&=\dfrac{\alpha}{1-\alpha}\cdot\dfrac{w}{r}\cdot n& \tag{1.26}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.27}
+    y&=n^{1-\alpha}k^{\alpha}& \tag{1.27}
+\end{flalign*}
+
+\subsection*{e.}
+
+\begin{lstlisting}
+    var c k n r w y a g; // Define endogenous variables
+    varexo eg ea; // Define exogenous variables
+    parameters beta delta alpha rhog rhoa phi; // Define parameters variables
+    alpha = 0.3; // capital share
+    beta = 0.95; // discount rate
+    phi = 0.6; // parameter in the consumer's utility: scale parameter
+    delta = 0.025;// capital depreciation rate
+    rhog = 0.9; // auto-correlation of g
+    rhoa = 0.9; // auto-correlation of a
+    
+    model;
+    1/c=beta*(1/(c(+1)))*(r(+1)+1-delta);
+    w = phi*c; 
+    r = alpha*a*(k(-1))^(alpha-1)*n^(1-alpha);
+    w = (1-alpha)*a*(k(-1))^alpha*n^(-alpha);
+    k+c+g = (k(-1))*(1-delta)
+    +a*(k(-1))^alpha*n^(1-alpha);
+    log(a) = rhoa*log(a(-1))+ea;
+    y = a*(k(-1))^alpha*n^(1-alpha);
+    g = rhog*g(-1)+eg;
+    end;
+    
+    steady_state_model;
+        a = 1;
+        g = 0;
+        r = 1/beta - (1-delta);
+        c = r/phi * (1-alpha)/alpha * (r/alpha)^(1/(alpha-1));
+        w = phi*c;
+        n = c / ( (r/alpha)^(alpha/(alpha-1))
+         - delta*(r/alpha)^(1/(alpha-1)));
+        k = alpha/(1-alpha) * w/r *n;
+        y = n^(1-alpha)*k^(alpha);
+    end;
+    
+    steady; // calculate the steady state
+    
+    shocks;
+        var ea; // type of the shock
+        stderr 0.01; // Scale of the shock
+        var eg; // type of the shock
+        stderr 0.01; // Scale of the shock
+    end;
+    
+    check;
+    stoch_simul(order=1,irf=40,hp_filter=1600);
+\end{lstlisting}
+
+\subsection*{f.}
+
+\begin{lstlisting}
+    clc;
+    clear;
+    close all;
+%-------------------------------------------------------------------------%
+%% Attempt 1: Take Home Q1 
+    dynare Q1_v1.mod;
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false, width = 1\textwidth]{figures/figure1}
+  \caption{Orthogonalized shock to $e_{g,t}$}
+  \label{fig:figure1}
+\end{figure}
+
+As shown above, all the endogenous variables come into steady state gradually. 
+
+Consumption and wage decrease at the beginning and then come into a steady state. 
+
+Labor, real interest rate, output $y_{t}$ and of course government expenditure go up at first, and converge to steady state. 
+
+Capital goes up gradually at a decreasing speed, then goes to steady state slowly.
+
+\begin{figure}[H]
+  \centering
+  \includesvg[inkscapelatex=false, width = 1\textwidth]{figures/figure2}
+  \caption{Orthogonalized shock to $e_{t}$}
+  \label{fig:figure2}
+\end{figure}
+
+As shown above, all the endogenous variables come into steady state gradually. 
+
+Consumption, capital and wage go up in the beginning then go to a steady state. 
+
+Labor and real interest rate increase at the response of the shock, then reduce quickly, even go below the steady state, and converge to steady state eventually. 
+
+TFP, output goes up at the beginning, then monotonically converges to the steady state.
+
+In this model, government expenditure shock produces counterfactual predictions for consumption (compared to data). But the TFP shock in this model matches the data: both labor and consumption are procyclical.
+
+\section{NKPC in dynare}
+
+\subsection*{a.}
+
+The first equation describes the trade-off between consumption and labor.
+
+The second equation describes the inter-period trade-off of consumption and saving.
+
+The third equation comes from the firm side, is the NKPC derived from the wholesale firm's and retail firm's optimization problem.
+
+The fourth equation is the wholesale firm's technology we defined. 
+
+The fifth equation is the resource constraint. It also implies that the market is clear.
+
+The last equation describes that the monetary authority follows a version of the Taylor rule.
+
+\subsection*{b.}
+
+Endogenous variables: $\boxed{c_{t}, n_{t}, i_{t}, w_{t}, y_{t}, \pi_{t}}$ in each period.
+
+We consider the monetary policy shock $\boxed{e}$.
+
+\subsection*{c.}
+
+In steady state:
+
+\begin{flalign*} \label{eq:2.1}
+    \phi n^{\gamma}c&=w& \tag{2.1}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.2}
+    1&=\beta\dfrac{1+i}{1+\pi}& \tag{2.2}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.3}
+    \psi\pi\left(1+\pi\right)&=\dfrac{1}{1-\epsilon}\left(1-\epsilon w\right)n+\beta\psi\pi\left(1+\pi\right)& \tag{2.3}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.4}
+    y&=n& \tag{2.4}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.5}
+    n&=c+\dfrac{\psi}{2}\pi^{2}& \tag{2.5}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.6}
+    \pi&=0& \tag{2.6}
+\end{flalign*}
+
+Plug \eqref{eq:2.6} into previous equations we have:
+
+\begin{flalign*} \label{eq:2.7}
+    \phi n^{\gamma}c&=w& \tag{2.7}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.8}
+    1&=\beta\left(1+i\right)& \tag{2.8}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.9}
+    0&=\dfrac{1}{1-\epsilon}\left(1-\epsilon w\right)n& \tag{2.9}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.10}
+    y&=n& \tag{2.10}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.11}
+    n&=c& \tag{2.11}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.12}
+    \pi&=0& \tag{2.12}
+\end{flalign*}
+
+Since $1-\epsilon\neq0$, $n\neq0$, \eqref{eq:2.9} becomes:
+
+$1-\epsilon w=0$
+
+$w=\dfrac{1}{\epsilon}$
+
+Substitute the system of equations we get:
+
+$\phi c^{\gamma}c=w=\dfrac{1}{\epsilon}$
+
+$\iff$
+
+$\phi c^{\gamma+1}=\dfrac{1}{\epsilon}$
+
+$\iff$
+
+$c^{\gamma+1}=\dfrac{1}{\phi\epsilon}$
+
+\begin{flalign*} \label{eq:2.13}
+    c&=\dfrac{1}{\left(\phi\epsilon\right)^{\frac{1}{\gamma+1}}}& \tag{2.13}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.14}
+    1+i&=\dfrac{1}{\beta}& \tag{2.14}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.15}
+    w&=\dfrac{1}{\epsilon}& \tag{2.15}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.16}
+    y&=n& \tag{2.16}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.17}
+    n&=c& \tag{2.17}
+\end{flalign*}
+
+\begin{flalign*} \label{eq:2.18}
+    \pi&=0& \tag{2.18}
+\end{flalign*}
+
+\subsection*{d.}
+
+\begin{lstlisting}
+    var c n i w y pi; // Define endogenous variables
+    varexo e; // Define exogenous variables
+    parameters phi gamma beta psi epsilon lambda rho; // Define parameters
+    phi = 0.6; 
+    gamma = 1;
+    beta = 0.95; // discount rate
+    psi = 0.5; 
+    epsilon = 1.2;
+    lambda = 1.5;
+    rho = 0.9; 
+    
+    model;
+    w = phi*c*n^(gamma); 
+    1/c = beta*(1/(c(+1)))*((1+i)/(1+pi(+1)));
+    psi*pi*(1+pi) = (1/(1-epsilon))*(1-epsilon*w)*n
+     + beta*psi*(pi(+1))*(1+(pi(+1)));
+    y = n;
+    n = c+(psi/2)*pi^2;
+    i = rho*(i(-1))+(1-rho)*(1/beta-1)+lambda*pi+e;
+    end;
+    
+    steady_state_model;
+        c = 1/((phi*epsilon)^(1/(gamma+1)));
+        i = 1/beta-1;
+        w = 1/epsilon;
+        n = 1/((phi*epsilon)^(1/(gamma+1)));
+        y = 1/((phi*epsilon)^(1/(gamma+1)));
+        pi = 0;
+    end;
+    
+    steady; // calculate the steady state
+    
+    shocks;
+        var e; // type of the shock
+        stderr 0.01; 
+    end;
+    
+    check;
+    stoch_simul(order=1,irf=40,hp_filter=1600);
+\end{lstlisting}
+
+Use dynare:
+\begin{lstlisting}
+    clc;
+    clear;
+    close all;
+%-------------------------------------------------------------------------%
+%% Attempt 1: Take Home Q2 
+    dynare Q2_v1.mod;
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includesvg[inkscapelatex=false, width = 1\textwidth]{figures/figure3}
+    \caption{Orthogonalized shock to $e$}
+    \label{fig:figure3}
+\end{figure}
+
+\subsection*{e.}
+
+After the shock leads to a temporary increment in nominal interest rate:
+
+Consumption, labor, wage, total output and inflation rate decrease initially, and go to steady state eventually.
+
+Marginal cost is the same as the wage in this case.
+
+It's a good explanation. If the nominal interest rate increases more than the inflation, the real interest rate goes down, thus the economy cooling down.
+
+Also, as we can see, the increase in nominal interest rate leads to a temporary recession: reduction in consumption and output, makes workers unwilling to work, and wage decreases as well.
+
+It shows how important the policy shock is.
+
+\end{document}

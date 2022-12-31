@@ -1,0 +1,612 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{a4wide}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+
+\DeclareMathOperator{\EX}{\mathbb{E}}
+
+\titleformat*{\subsubsection}{\normalfont}
+
+\author{Yu Xia \\ ID: yx5262}
+\title{\textbf{Yu Xia's A3}}
+\date{October 2022}
+
+\begin{document}
+\maketitle
+
+\nocite{*}
+
+\section*{\textrm{Multiple Choice}}
+
+1-5:\\
+dbbc(abd)
+
+6-10:\\
+dcccc
+
+11-15:\\
+dadad
+
+\section*{\textrm{Long}}
+
+\subsection*{\textrm{1. Static problem, changes in Govt' Expenditures Application}}
+
+\subsubsection*{\textrm{a.}}
+
+The optimality problem:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    & \max_{c, l}
+      U\left(c,l\right) \\
+     \textrm{subject to}\\
+    &   c+t=wn+D,
+    &   n=1-l\in[0,1].
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+    & \max_{c, l}
+      log\left(c\right)+\phi log\left(l\right) \\
+     \textrm{subject to}\\
+    &   c+t=wn+D,
+    &   n=1-l\in[0,1].
+    \end{aligned}
+\end{equation*}%
+}}
+
+The first constraint is budget constraint, the second one is the amount of time available.
+
+\newpage
+
+The first order conditions:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+        U_{c}\left(c,l\right)-\lambda=0\\
+        U_{l}\left(c,l\right)-w\lambda=0\\
+        c+t=w\left(1-l\right)+D
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+        \dfrac{1}{c}-\lambda=0\\
+        \dfrac{\phi}{l}-w\lambda=0\\
+        c+t=w\left(1-l\right)+D
+    \end{aligned}
+\end{equation*}%
+}}
+
+Consumer's optimality condition:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    \dfrac{U_{l}\left(c,l\right)}{U_{c}\left(c,l\right)}=w
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+    \dfrac{\dfrac{\phi}{l}}{\dfrac{1}{c}}=w
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+        \dfrac{\phi c}{l}=w
+    \end{aligned}
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{b.}}
+
+Firm's optimality problem is to maximize profit:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+     \max_{n}
+      AF\left(n\right)-wn+k     
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+     \max_{n}
+      An^{1-\alpha}-wn+k     
+    \end{aligned}
+\end{equation*}%
+}}
+
+where $k$ is a constant here.
+
+The underlying constraint is that the firm cannot produce more than its production function defines.
+
+The first order condition (also, the optimality problem) express as:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    MP_{n}=w
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+    A\left(1-\alpha\right)n^{-\alpha}=w
+    \end{aligned}
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{c.}}
+
+In the static model, the government has to satisfy its budget constraint.
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    g=t
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{d.}}
+
+Both firms and consumers optimize their utility/welfare/profit, satisfying the constraints above (including government budget constraint). In competitive equilibrium, the market is clear. For example, supply of labor is equal to demand. The wage of consumers and firms are the same. 
+
+\subsubsection*{\textrm{e.}}
+
+Substitute $D$, with the condition $g=t$ and equilibrium wage, we have 
+
+$c+g=An^{1-\alpha}+k\implies c=An^{1-\alpha}+k-g$
+
+Plug in FOCs, we have: \\
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+        \phi\left(An^{1-\alpha}+k-g\right)-A\left(1-\alpha\right)n^{-\alpha}\left(1-n\right)=0     
+    \end{aligned}
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{f.}}
+
+\begin{flalign*}
+    \dfrac{\partial n}{\partial g} &=\dfrac{-\left(-\phi\right)}{\phi\cdot A\left(1-\alpha\right)n^{-\alpha}-A\left(1-\alpha\right)\left(-\alpha n^{-\alpha -1}-\left(1-\alpha\right)n^{-\alpha}\right)} &\\
+    & =\dfrac{\phi}{\phi\cdot A\left(1-\alpha\right)n^{-\alpha}+A\left(1-\alpha\right)\left(\alpha n^{-\alpha -1}+\left(1-\alpha\right)n^{-\alpha}\right)} &\\
+    & =\dfrac{\phi}{A\left(1-\alpha\right)n^{-\alpha}\phi+A\left(1-\alpha\right)n^{-\alpha}\left(\alpha n^{-1}+\left(1-\alpha\right)\right)} &\\
+    & =\boxed{\dfrac{\phi}{A\left(1-\alpha\right)n^{-\alpha}\left(\phi+\dfrac{\alpha}{n}+\left(1-\alpha\right)\right)}}
+\end{flalign*}
+
+$\because U_{l}>0$
+
+$\therefore \dfrac{\phi}{l}>0\implies\phi>0$
+
+$\because AF_{n}>0$
+
+$\therefore A\left(1-\alpha\right)n^{-\alpha}>0$
+
+$\because A>0, n>0$
+
+$\therefore n^{-\alpha}\geqslant0$ and $n^{-\alpha-1}\geqslant0$ $\forall\alpha\in\mathbb{R}$
+
+$\implies 1-\alpha>0$
+
+$\because AF_{nn}<0$
+
+$\therefore A\left(1-\alpha\right)\left(-\alpha\right)n^{-\alpha-1}<0$
+
+$\implies \alpha>0$
+
+$\therefore 0<\alpha<1$
+
+$\dfrac{\alpha}{n}>0$
+
+$\therefore\boxed{\dfrac{\partial n}{\partial g}>0}$
+
+\subsubsection*{\textrm{g.}}
+
+Plug in we have:
+
+$\left(An^{0.5}+k-g\right)-0.5An^{-0.5}\left(1-n\right)=0$
+
+$An^{0.5}+k-g-0.5An^{-0.5}+0.5An^{0.5}=0$
+
+$1.5An^{0.5}+k-g-0.5An^{-0.5}=0$
+
+\begin{flalign*}
+    \dfrac{\partial n}{\partial A} & =\dfrac{-\left(1.5n^{0.5}-0.5n^{-0.5}\right)}{1.5A\times0.5n^{-0.5}-0.5A\times\left(-0.5\right)n^{-1.5}} &\\
+    & =\dfrac{-1.5n^{0.5}+0.5n^{-0.5}}{0.75An^{-0.5}+0.25An^{-1.5}} &\\
+    & =\dfrac{-6n^{0.5}+2n^{-0.5}}{3An^{-0.5}+An^{-1.5}} &\\
+    & =\dfrac{-6n^{2}+2n}{3An+A}
+\end{flalign*}
+
+When $n^{*}=\dfrac{1}{6}$,
+
+$\dfrac{\partial n^{*}}{\partial A}=\dfrac{-6\times\dfrac{1}{36}+\dfrac{1}{3}}{\dfrac{A}{2}+A}=\dfrac{-\dfrac{1}{6}+\dfrac{1}{3}}{\dfrac{3}{2}A}=\dfrac{\dfrac{1}{6}}{A}\times\dfrac{2}{3}=\dfrac{1}{9A}>0$
+
+Increase in TFP results in more equilibrium employment. 
+
+\subsection*{\textrm{2. Dynamic model}}
+
+\subsubsection*{\textrm{a.}}
+
+Consumer maximize his/her utility:
+
+$\displaystyle\max_{c_{1}, c_{2}, l_{1}, l_{2}} U\left(c_{1},l_{1}\right)+U\left(c_{2}, l_{2}\right)$
+
+For simplicity, we assume $\beta=1$ here.
+
+
+Consumer's present value lifetime budget constraint:
+
+$c_{1}+t_{1}+\dfrac{c_{2}+t_{2}}{1+r}=w_{1}n_{1}+D_{1}+\dfrac{w_{2}n_{2}+D_{2}}{1+r}$
+
+Consumer's time constraint:
+
+$n_{1}=1-l_{1}$
+
+$n_{2}=1-l_{2}$
+
+Firm's production function:
+
+$A_{1}F\left(k_{1}, n^{d}_{1}\right)-w_{1}n^{d}_{1}+\left(1-\delta_{1}\right)k_{1}-k_{2}+\dfrac{1}{1+r}\left(A_{2}F\left(k_{2}, n^{d}_{2}\right)-w_{2}n^{d}_{2}+\left(1-\delta_{2}\right)k_{2}\right)$ 
+
+By taking first order derivative we have optimal conditions:
+
+\begin{equation*}
+    \dfrac{U_{l}\left(c_{1}, l_{1}\right)}{U_{c}\left(c_{1}, l_{1}\right)}=w_{1} 
+\end{equation*}
+
+\begin{equation*}
+    \dfrac{U_{l}\left(c_{2}, l_{2}\right)}{U_{c}\left(c_{2}, l_{2}\right)}=w_{2} 
+\end{equation*}
+
+\begin{equation*}
+    \dfrac{U_{c}\left(c_{1}, l_{1}\right)}{U_{c}\left(c_{2}, l_{2}\right)}=1+r 
+\end{equation*}
+
+Rearranging these terms:
+
+\begin{equation*}
+    \dfrac{U_{l}\left(c_{1}, l_{1}\right)}{U_{l}\left(c_{2}, l_{2}\right)}=\left(1+r\right)\dfrac{w_{1}}{w_{2}} 
+\end{equation*}
+
+For the firm:
+
+\begin{equation*}
+    A_{1}F_{n}\left(k_{1}, n^{d}_{1}\right)=w_{1}
+\end{equation*}
+
+\begin{equation*}
+    A_{2}F_{n}\left(k_{2}, n^{d}_{2}\right)=w_{2}
+\end{equation*}
+
+\subsubsection*{\textrm{b.}}
+
+Consumers and firms maximize their utility/welfare/profit, under the constraints they have and the balanced gov's budget constraint. When market is clear, $w_{1}$, $w_{2}$ and $r$ is determined in this system, and the choices of consumer $\left(c_{1}, c_{2}, l_{1}, l_{2}, n_{1}, n_{2}\right)$ is determined. Firms decide how to produce (the production function is known, choices are $n^{d}_{1}, n^{d}_{2}, k_{2}$). Gov's budget constraint is also considered in this problem. 
+
+So there are 14 endogenous variables: $w_{1}, w_{2}, r, c_{1}, c_{2}, l_{1}, l_{2}, n_{1}, n_{2}, n^{d}_{1}, n^{d}_{2}, k_{2}, t_{1}, t_{2}$.
+
+There are 7 exogenous variables: $A_{1}, A_{2}, k_{1}, g_{1}, g_{2}, \delta_{1}, \delta_{2}$
+
+\subsubsection*{\textrm{c.}}
+
+By part \textrm{a.} we have:
+
+\begin{equation}
+    n_{1}=1-l_{1} 
+\end{equation}
+
+\begin{equation}
+    n_{2}=1-l_{2} 
+\end{equation}
+
+\begin{equation}
+    \dfrac{U_{l}\left(c_{1}, l_{1}\right)}{U_{c}\left(c_{1}, l_{1}\right)}=w_{1} 
+\end{equation}
+
+\begin{equation}
+    \dfrac{U_{l}\left(c_{2}, l_{2}\right)}{U_{c}\left(c_{2}, l_{2}\right)}=w_{2} 
+\end{equation}
+
+\begin{equation}
+    \dfrac{U_{c}\left(c_{1}, l_{1}\right)}{U_{c}\left(c_{2}, l_{2}\right)}=1+r 
+\end{equation}
+
+\begin{equation}
+    A_{1}F_{n}\left(k_{1}, n^{d}_{1}\right)=w_{1}
+\end{equation}
+
+\begin{equation}
+    A_{2}F_{n}\left(k_{2}, n^{d}_{2}\right)=w_{2}
+\end{equation}
+
+$-1+\dfrac{1}{1+r}\left(A_{2}F_{k}\left(k_{2}, n^{d}_{2}\right)+\left(1-\delta_{2}\right)\right)=0$
+
+$\iff \dfrac{1}{1+r}\left(A_{2}F_{k}\left(k_{2}, n^{d}_{2}\right)+\left(1-\delta_{2}\right)\right)=1$
+
+$\iff A_{2}F_{k}\left(k_{2}, n^{d}_{2}\right)+\left(1-\delta_{2}\right)=1+r$
+
+$\iff A_{2}F_{k}\left(k_{2}, n^{d}_{2}\right)=1+r-\left(1-\delta_{2}\right)=1+r-1+\delta_{2}$
+
+$\iff A_{2}F_{k}\left(k_{2}, n^{d}_{2}\right)=r+\delta_{2}$
+
+\begin{equation}
+    A_{2}F_{k}\left(k_{2}, n^{d}_{2}\right)=r+\delta_{2}
+\end{equation}
+
+In the competitive equilibrium:
+
+\begin{equation}
+    n^{d}_{1}=n_{1}
+\end{equation}
+
+\begin{equation}
+    n^{d}_{2}=n_{2}
+\end{equation}
+
+The GDP in each period:
+
+\begin{equation}
+    A_{1}F\left(k_{1}, n^{d}_{1}\right)=c_{1}+k_{2}-\left(1-\delta_{1}\right)k_{1}+g_{1}
+\end{equation}
+
+\begin{equation}
+    A_{2}F\left(k_{2}, n^{d}_{2}\right)=c_{2}-\left(1-\delta_{2}\right)k_{2}+g_{2}
+\end{equation}
+
+For government:
+
+$t_{1}+\dfrac{t_{2}}{1+r}=g_{1}+\dfrac{g_{2}}{1+r}$
+
+For simplicity, we assume
+
+\begin{equation}
+    t_{1}=g_{1}
+\end{equation}
+
+\begin{equation}
+    t_{2}=g_{2}
+\end{equation}
+
+14 equations, 14 unknowns.
+
+\subsubsection*{\textrm{d.}}
+
+Substitute (10) into (8) we have:
+
+\begin{equation*}
+    A_{2}F_{k}\left(k_{2}, n_{2}\right)=r+\delta_{2}
+\end{equation*}
+
+\begin{equation}
+    A_{2}F_{k}\left(k_{2}, n_{2}\right)-\delta_{2}=r 
+\end{equation}
+%(15)%
+
+Substitute (15) into (5) we have
+
+\begin{equation*}
+    \dfrac{U_{c}\left(c_{1}, l_{1}\right)}{U_{c}\left(c_{2}, l_{2}\right)}=1+A_{2}F_{k}\left(k_{2}, n_{2}\right)-\delta_{2}
+\end{equation*}
+
+\begin{equation}
+    U_{c}\left(c_{1}, l_{1}\right)=\left(1+A_{2}F_{k}\left(k_{2}, n_{2}\right)-\delta_{2}\right)U_{c}\left(c_{2}, l_{2}\right) 
+\end{equation}
+%(16)%
+
+Substituting (1) and (2) into (16) we have:
+
+\begin{equation}
+    U_{c}\left(c_{1}, 1-n_{1}\right)=\left(1+A_{2}F_{k}\left(k_{2}, n_{2}\right)-\delta_{2}\right)U_{c}\left(c_{2}, 1-n_{2}\right) 
+\end{equation}
+%(17)%
+
+Substitute (9) into (11) we have:
+
+\begin{equation*}
+    A_{1}F\left(k_{1}, n_{1}\right)=c_{1}+k_{2}-\left(1-\delta_{1}\right)k_{1}+g_{1}
+\end{equation*}
+
+\begin{equation}
+    c_{1}=A_{1}F\left(k_{1}, n_{1}\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}
+\end{equation}
+%(18)%
+
+Substitute (10) into (12) we have:
+
+\begin{equation*}
+    A_{2}F\left(k_{2}, n_{2}\right)=c_{2}-\left(1-\delta_{2}\right)k_{2}+g_{2}
+\end{equation*}
+
+\begin{equation}
+    c_{2}=A_{2}F\left(k_{2}, n_{2}\right)+\left(1-\delta_{2}\right)k_{2}-g_{2}
+\end{equation}
+%(19)%
+
+Substitute (18) and (19) into (17) we have:
+
+\begin{multline}
+    U_{c}\left(A_{1}F\left(k_{1}, n_{1}\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}, 1-n_{1}\right)\\
+    =\left(1+A_{2}F_{k}\left(k_{2}, n_{2}\right)-\delta_{2}\right)U_{c}\left(A_{2}F\left(k_{2}, n_{2}\right)+\left(1-\delta_{2}\right)k_{2}-g_{2}, 1-n_{2}\right) 
+\end{multline}
+%(20)%
+
+On the other hand, substitute (1) into (3) we have:
+
+\begin{equation}
+    \dfrac{U_{l}\left(c_{1}, 1-n_{1}\right)}{U_{c}\left(c_{1}, 1-n_{1}\right)}=w_{1}
+\end{equation}
+%(21)%
+
+Substituting (6) and (9) into (21) we have:
+
+\begin{equation}
+    \dfrac{U_{l}\left(c_{1}, 1-n_{1}\right)}{U_{c}\left(c_{1}, 1-n_{1}\right)}=A_{1}F\left(k_{1}, n_{1}\right)
+\end{equation}
+%(22)%
+
+Substitute (18) into (22):
+
+\begin{equation*}
+    \dfrac{U_{l}\left(A_{1}F\left(k_{1}, n_{1}\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}, 1-n_{1}\right)}{U_{c}\left(A_{1}F\left(k_{1}, n_{1}\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}, 1-n_{1}\right)}=A_{1}F\left(k_{1}, n_{1}\right)
+\end{equation*}
+
+\begin{multline}
+    U_{l}\left(A_{1}F\left(k_{1}, n_{1}\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}, 1-n_{1}\right)\\
+    =U_{c}\left(A_{1}F\left(k_{1}, n_{1}\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}, 1-n_{1}\right)\cdot A_{1}F\left(k_{1}, n_{1}\right)
+\end{multline}
+%(23)%
+
+Denoting it as
+
+\begin{equation*}
+    n_{1}=Z\left(k_{2}\right)
+\end{equation*}
+
+Similarly, for (4), after substitution:
+
+\begin{multline}
+    U_{l}\left(A_{2}F\left(k_{2}, n_{2}\right)+\left(1-\delta_{2}\right)k_{2}-g_{2}, 1-n_{2}\right)\\
+    =A_{2}F_{n}\left(k_{2}, n_{2}\right)U_{c}\left(A_{2}F\left(k_{2}, n_{2}\right)+\left(1-\delta_{2}\right)k_{2}-g_{2}, 1-n_{2}\right)
+\end{multline}
+%(24)%
+
+Denoting it as
+
+\begin{equation*}
+    n_{2}=B\left(k_{2}\right)
+\end{equation*}
+
+Substituting (23) and (24) into (20), using $n_{1}=Z\left(k_{2}\right)$ and $n_{1}=B\left(k_{2}\right)$, we get
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{multline}
+    U_{c}\left(A_{1}F\left(k_{1}, Z\left(k_{2}\right)\right)-k_{2}+\left(1-\delta_{1}\right)k_{1}-g_{1}, 1-Z\left(k_{2}\right)\right) \\
+    =\left(1+A_{2}F_{k}\left(k_{2}, B\left(k_{2}\right)\right)-\delta_{2}\right)U_{c}\left(A_{2}F\left(k_{2}, B\left(k_{2}\right)\right)+\left(1-\delta_{2}\right)k_{2}-g_{2}, 1-B\left(k_{2}\right)\right) 
+\end{multline}%
+}}
+
+One equation, one unknown $k_{2}$.
+
+\subsection*{\textrm{3. Two Assets}}
+
+\subsubsection*{\textrm{a.}}
+
+Denote the quantity we pay for the bond, at period $t$, is $b_{t}$. The quantity of stock, is $a_{t}$.
+
+Period-$t$ budget constraint:
+
+$\boxed{P_{t}c_{t}+Q_{t}b_{t}+S_{t}a_{t}=Y_{t}+b_{t-1}+S_{t}a_{t-1}+D_{t}a_{t-1}}$
+
+\subsubsection*{\textrm{b.}}
+
+The Lagrange function is 
+
+$\dots +u\left(c_{t}\right)+\beta u\left(c_{t+1}\right)+\beta^{2} u\left(c_{t+2}\right)+\dots$
+
+$+\lambda_{t}\left(Y_{t}+b_{t-1}+S_{t}a_{t-1}+D_{t}a_{t-1}-P_{t}c_{t}-Q_{t}b_{t}-S_{t}a_{t}\right)$
+
+$+\beta\lambda_{t+1}\left(Y_{t+1}+b_{t}+S_{t+1}a_{t}+D_{t+1}a_{t}-P_{t+1}c_{t+1}-Q_{t+1}b_{t+1}-S_{t+1}a_{t+1}\right)$
+
+$+\beta^{2}\lambda_{t+2}\left(Y_{t+2}+b_{t+1}+S_{t+2}a_{t+1}+D_{t+2}a_{t+1}-P_{t+2}c_{t+2}-Q_{t+2}b_{t+2}-S_{t+2}a_{t+2}\right)$
+
+$+\dots$
+
+FOC w.r.t. $c_{t}$:
+
+$u^{\prime}\left(c_{t}\right)-\lambda_{t}P_{t}=0$
+
+FOC w.r.t. $a_{t}$:
+
+$-\lambda_{t}S_{t}+\beta\lambda_{t+1}\left(S_{t+1}+D_{t+1}\right)=0$
+
+FOC w.r.t. $b_{t}$:
+
+$-\lambda_{t}Q_{t}+\beta\lambda_{t+1}=0$
+
+\subsubsection*{\textrm{c.}}
+
+By FOCs we have
+
+$S_{t}=\dfrac{\beta\lambda_{t+1}}{\lambda_{t}}\left(S_{t+1}+D_{t+1}\right)$
+
+$Q_{t}=\dfrac{\beta\lambda_{t+1}}{\lambda_{t}}$
+
+On the other hand, 
+
+$\lambda_{t}=\dfrac{u^{\prime}\left(c_{t}\right)}{P_{t}}, \forall t$
+
+Plug in the equation we have:
+
+\begin{flalign*}
+    Q_{t} & = \dfrac{\beta\dfrac{u^{\prime}\left(c_{t+1}\right)}{P_{t+1}}}{\dfrac{u^{\prime}\left(c_{t}\right)}{P_{t}}} &\\
+    & =\dfrac{\beta\dfrac{u^{\prime}\left(c_{t+1}\right)}{P_{t+1}}\cdot P_{t}}{\dfrac{u^{\prime}\left(c_{t}\right)}{P_{t}}\cdot P_{t}} &\\
+    & =\dfrac{\beta u^{\prime}\left(c_{t+1}\right)\dfrac{P_{t}}{P_{t+1}}}{u^{\prime}\left(c_{t}\right)} &\\
+    & =\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}\dfrac{P_{t}}{P_{t+1}} &\\
+    & =\boxed{\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}\dfrac{1}{1+\pi_{t+1}}}
+\end{flalign*}
+
+$\boxed{S_{t}=\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}\left(S_{t+1}+D_{t+1}\right)\dfrac{1}{1+\pi_{t+1}}}$
+
+These equations show that many factors could impact the prices.
+
+Future return: future price of stock and future dividend. Positively related to $S_{t}$. It is more related to a specific firm. Bonds are more simple, since there's no payment coming from dividends.
+
+The ratio of marginal willingness to consume today compared to the next period. Because of diminishing marginal utility, the increase in $c_{1}$ decreases $u^{\prime}\left(c_{t}\right)$, thus prices go up. Similarly, $c_{t+1}$ is negatively correlated.
+
+Inflation. Including any other factors affect inflation rate, such as policies, shocks, etc. Negatively related.
+
+The term of future return could be expressed as $1+i_{t}$. In the long run, the MRS of utility degenerates. So LHS describes consumers' impatience, and it is related to the real interest rate in the RHS. 
+
+\subsubsection*{\textrm{d.}}
+
+For stock:
+
+$\dfrac{S_{t+1}+D{t+1}}{S_{t}}=\dfrac{1}{\dfrac{\beta\lambda_{t+1}}{\lambda_{t}}}=\dfrac{\lambda_{t}}{\beta\lambda_{t+1}}=\left(1+\pi_{t+1}\right)\dfrac{u^{\prime}\left(c_{t}\right)}{\beta u^{\prime}\left(c_{t+1}\right)}$
+
+$\dfrac{1}{Q_{t}}=\dfrac{\lambda_{t}}{\beta\lambda_{t+1}}=\left(1+\pi_{t+1}\right)\dfrac{u^{\prime}\left(c_{t}\right)}{\beta u^{\prime}\left(c_{t+1}\right)}$
+
+The same, mathematically, and also intuitively. Because the common factor behind this equation is that they both depend on MRS and inflation. 
+
+\end{document}

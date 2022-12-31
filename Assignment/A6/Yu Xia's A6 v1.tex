@@ -1,0 +1,760 @@
+% Name: Yu Xia's A6 v1
+% Author: Yu Xia 
+% Description: The version before submitted (to be cont.). Correct spelling and grammar.
+% Last Updated: Nov 23, 2022
+
+\documentclass{article}
+
+\usepackage{titlesec}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{a4wide}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily
+}
+
+\lstset{style=mystyle
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+
+\titleformat*{\section}{\Large\rmfamily\bfseries}
+
+\titleformat*{\subsection}{\large\rmfamily\bfseries}
+
+\titleformat*{\subsubsection}{\normalfont\rmfamily}
+
+\titleformat*{\paragraph}{\normalfont\rmfamily}
+
+\author{Yu Xia \\ ID: yx5262}
+\title{\textbf{Yu Xia's A6}}
+\date{Fall 2022}
+
+\begin{document}
+\maketitle
+
+\nocite{*}
+
+\section*{Multiple Choice}
+
+1-5:\\
+cdeac
+
+6-10:\\
+badac
+
+11-15:\\
+bbcea
+
+16-20:\\
+adacb
+
+\section*{Long}
+
+\subsection*{1. Labor Search Model A}
+
+\subsubsection*{a.}
+
+Consumer's job-finding constraint:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} \label{eq:1.1}
+    \left(1-\rho\right)n^{s}_{t-1}+p^{f}_{t}s_{t}&=n^{s}_{t}& \tag{1.1}
+\end{flalign*}%
+}%
+}
+
+Consumer's labor is determined by the proportion of people keeping their job, the probability of finding a job, and the search effort $s_{t}$. It is different from the classical framework which focuses on the choice of labor and consumption, without probability.
+
+Consumer's budget constraint:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} \label{eq:1.2}
+    c_{t}&=\left(1-t_{t}\right)w_{t}n^{s}_{t}+\left(1-p^{f}_{t}\right)s_{t}b^{ue}_{t}& \tag{1.2}
+\end{flalign*}%
+}%
+}
+
+When consumers find a job (in other words, those people who have a job), they get the salary according to their labor, otherwise (unemployment pool) they spend the time to find a job and get the unemployment benefit. It can also be expressed as the expectation: the case of having a job and getting paid, and the case of finding a job and getting unemployment benefits.
+
+The difference between the dynamic model and the static model is that when we introduce $\rho$, there are workers who stay in their job for the next period. Variables could be different in each time period, so we have the subscript.
+
+\subsubsection*{b.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+The Lagrangian:
+\begin{align*}
+    \quad\mathcal{L} & = \sum_{t=0}^{\infty}\beta^{t}\Biggl(\left(u\left(c_{t}\right)-h\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\right)& \\
+    &\quad\quad-\lambda^{h}_{t}\left(c_{t}-\left(1-t_{t}\right)w_{t}n^{s}_{t}-\left(1-p^{f}_{t}\right)s_{t}b^{ue}_{t}\right)&\\
+    &\quad\quad-\mu^{h}_{t}\left(\left(1-\rho\right)n^{s}_{t-1}+p^{f}_{t}s_{t}-n^{s}_{t}\right)\Biggr)&\\
+    &=\dots&\\
+    &\quad+u\left(c_{t}\right)-h\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)& \\
+    &\quad\quad-\lambda^{h}_{t}\left(c_{t}-\left(1-t_{t}\right)w_{t}n^{s}_{t}-\left(1-p^{f}_{t}\right)s_{t}b^{ue}_{t}\right)&\\
+    &\quad\quad-\mu^{h}_{t}\left(\left(1-\rho\right)n^{s}_{t-1}+p^{f}_{t}s_{t}-n^{s}_{t}\right)&\\
+    &\quad+\beta u\left(c_{t+1}\right)-h\left(\left(1-p^{f}_{t+1}\right)s_{t+1}+n^{s}_{t+1}\right) &\\
+    &\quad\quad-\beta\lambda^{h}_{t+1}\left(c_{t+1}-\left(1-t_{t+1}\right)w_{t+1}n^{s}_{t+1}-\left(1-p^{f}_{t+1}\right)s_{t+1}b^{ue}_{t+1}\right)&\\
+    &\quad\quad-\beta\mu^{h}_{t+1}\left(\left(1-\rho\right)n^{s}_{t}+p^{f}_{t+1}s_{t+1}-n^{s}_{t+1}\right)&\\
+    &\quad+\dots
+\end{align*}%
+}%
+}
+
+The choice variables: $\boxed{c_{t}$, $n^{s}_{t}$, $s_{t}}$ (in each period).
+
+The given variables: $\boxed{p^{f}_{t}$, $w_{t}$, $b^{ue}_{t}$, $t_{t}$, $\rho$, $\beta}$.
+
+\subsubsection*{c.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+    FOCs:
+
+    w.r.t $c_{t}$:
+    \begin{flalign} \label{eq:1.3}
+        u^{\prime}-\lambda^{h}_{t}&=0& \tag{1.3}
+    \end{flalign}
+
+    w.r.t $n^{s}_{t}$:
+    \begin{flalign*} \label{eq:1.4}
+        -h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)+\lambda^{h}_{t}\left(1-t_{t}\right)w_{t}+\mu^{h}_{t}-\beta\mu^{h}_{t+1}\left(1-\rho\right)&=0& \tag{1.4}
+    \end{flalign*}
+
+    w.r.t $s_{t}$:
+    \begin{flalign*} \label{eq:1.5}
+        -h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\left(1-p^{f}_{t}\right)+\lambda^{h}_{t}\left(1-p^{f}_{t}\right)b^{ue}_{t}-\mu^{h}_{t}p^{f}_{t}&=0& \tag{1.5}
+    \end{flalign*}%
+}%
+}
+
+\eqref{eq:1.4} $\iff$\begin{flalign*} 
+    h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)&=u^{\prime}\left(c_{t}\right)\left(1-t_{t}\right)w_{t}+\mu^{h}_{t}-\beta\mu^{h}_{t+1}\left(1-\rho\right)& 
+\end{flalign*}
+
+\eqref{eq:1.5} $\iff$\begin{flalign*} 
+    h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\left(1-p^{f}_{t}\right)&=u^{\prime}\left(c_{t}\right)\left(1-p^{f}_{t}\right)b^{ue}_{t}-\mu^{h}_{t}p^{f}_{t}&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\left(1-p^{f}_{t}\right)-u^{\prime}\left(c_{t}\right)\left(1-p^{f}_{t}\right)b^{ue}_{t}&=-\mu^{h}_{t}p^{f}_{t}&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    u^{\prime}\left(c_{t}\right)\left(1-p^{f}_{t}\right)b^{ue}_{t}-h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\left(1-p^{f}_{t}\right)&=\mu^{h}_{t}p^{f}_{t}&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    \dfrac{u^{\prime}\left(c_{t}\right)\left(1-p^{f}_{t}\right)b^{ue}_{t}-h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\left(1-p^{f}_{t}\right)}{p^{f}_{t}}&=\mu^{h}_{t}&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    \left(u^{\prime}\left(c_{t}\right)b^{ue}_{t}-h^{\prime}\left(\left(1-p^{f}_{t}\right)s_{t}+n^{s}_{t}\right)\right)\dfrac{1-p^{f}_{t}}{p^{f}_{t}}&=\mu^{h}_{t}&
+\end{flalign*}
+
+And
+\begin{flalign*} 
+    \left(u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}-h^{\prime}\left(\left(1-p^{f}_{t+1}\right)s_{t+1}+n^{s}_{t+1}\right)\right)\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}&=\mu^{h}_{t+1}&
+\end{flalign*}
+
+\begin{flalign*} 
+    \therefore h^{\prime}\left(lfp_{t}\right)&=u^{\prime}\left(c_{t}\right)\left(1-t_{t}\right)w_{t}+\left(u^{\prime}\left(c_{t}\right)b^{ue}_{t}-h^{\prime}\left(lfp_{t}\right)\right)\dfrac{1-p^{f}_{t}}{p^{f}_{t}}&\\
+    &\quad\quad -\beta\left(u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}-h^{\prime}\left(lfp_{t+1}\right)\right)\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(lfp_{t}\right)&=u^{\prime}\left(c_{t}\right)\left(1-t_{t}\right)w_{t}+u^{\prime}\left(c_{t}\right)b^{ue}_{t}\dfrac{1-p^{f}_{t}}{p^{f}_{t}}-h^{\prime}\left(lfp_{t}\right)\dfrac{1-p^{f}_{t}}{p^{f}_{t}}&\\
+    &\quad\quad -\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}+\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(lfp_{t}\right)+h^{\prime}\left(lfp_{t}\right)\dfrac{1-p^{f}_{t}}{p^{f}_{t}}&=u^{\prime}\left(c_{t}\right)\left(\left(1-t_{t}\right)w_{t}+b^{ue}_{t}\dfrac{1-p^{f}_{t}}{p^{f}_{t}}\right)&\\
+    &\quad\quad -\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}+\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(lfp_{t}\right)\left(1+\dfrac{1-p^{f}_{t}}{p^{f}_{t}}\right)&=u^{\prime}\left(c_{t}\right)\left(\left(1-t_{t}\right)w_{t}+b^{ue}_{t}\dfrac{1-p^{f}_{t}}{p^{f}_{t}}\right)&\\
+    &\quad\quad -\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}+\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(lfp_{t}\right)\left(1+\dfrac{1}{p^{f}_{t}}-1\right)&=u^{\prime}\left(c_{t}\right)\left(\left(1-t_{t}\right)w_{t}+b^{ue}_{t}\dfrac{1-p^{f}_{t}}{p^{f}_{t}}\right)&\\
+    &\quad\quad -\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}+\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(lfp_{t}\right)\dfrac{1}{p^{f}_{t}}&=u^{\prime}\left(c_{t}\right)\left(\left(1-t_{t}\right)w_{t}+b^{ue}_{t}\dfrac{1-p^{f}_{t}}{p^{f}_{t}}\right)&\\
+    &\quad\quad -\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}+\beta\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    h^{\prime}\left(lfp_{t}\right)&=u^{\prime}\left(c_{t}\right)\left(p^{f}_{t}\left(1-t_{t}\right)w_{t}+b^{ue}_{t}\left(1-p^{f}_{t}\right)\right)&\\
+    &\quad\quad -\beta p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}+\beta p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    \dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}&=\left(p^{f}_{t}\left(1-t_{t}\right)w_{t}+b^{ue}_{t}\left(1-p^{f}_{t}\right)\right)&\\
+    &\quad\quad -\dfrac{\beta p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)u^{\prime}\left(c_{t+1}\right)b^{ue}_{t+1}}{u^{\prime}\left(c_{t}\right)}+\dfrac{\beta p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}& 
+\end{flalign*}
+
+Assume $b^{ue}_{t}=b^{ue}_{t+1}=b$
+
+$\iff$
+\begin{flalign*} \label{eq:1.6}
+    \dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}&=\left(p^{f}_{t}\left(1-t_{t}\right)w_{t}+b\left(1-p^{f}_{t}\right)\right)&\\
+    &\quad\quad +p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)\left(\dfrac{\beta h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}-\dfrac{\beta u^{\prime}\left(c_{t+1}\right)b}{u^{\prime}\left(c_{t}\right)}\right)& \tag{1.6}
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    \dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}&=\left(p^{f}_{t}\left(1-t_{t}\right)w_{t}+b\left(1-p^{f}_{t}\right)\right)&\\
+    &\quad\quad +p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)\left(\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}\dfrac{h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(c_{t+1}\right)}-\dfrac{\beta u^{\prime}\left(c_{t+1}\right)b}{u^{\prime}\left(c_{t}\right)}\right)& 
+\end{flalign*}
+
+\subsubsection*{d.}
+
+A job is an asset for consumers.
+
+All these relative to the value of unemployment benefit $b$.
+
+The pricing kernel: $\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}$, working as a type of asset long lasting relationship. The opportunity cost across periods. If workers found a job in one period, they will not need to search for jobs in the next period if they keep their jobs.
+
+The asset value (of a job) is the avoided disutility from searching a job in period $t+1$: $\dfrac{h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(c_{t+1}\right)}$.
+
+The adjustment for relative probability of not finding a job next period: $\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}$.
+
+If $p^{f}_{t+1}$ increases, $-\dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}$ increases (the absolute value decreases.) Higher probability of successfully finding work in the future encourages workers to wait for a period.
+
+If $b$ increases, $-\dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}$ decreases (usually it is the case). Consumers will be better off and consume more. 
+
+If $\beta$ increases, $-\dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}$ decreases. Workers will be less impatient, and attach importance to the longer term. It would be easier for workers to find jobs successfully as time goes by.
+
+\subsubsection*{e.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} \label{eq:1.7}
+    n_{t+1}&=\left(1-\rho\right)n_{t}+v_{t+1}q_{t+1}& \tag{1.7}
+\end{flalign*}%
+}%
+}
+
+$n_{t}$ represents labor demand $n^{d}_{t}$.
+
+The labor in the $t+1$ period is determined by two terms: for the fraction of keeping their job, they stay in the labor market in the next period $(t+1)$. For the vacancy, the firm will find the worker with probability $q$. 
+
+In the classical model we assume that the firm can make the best of their labor demand, and we didn't take the matching into consideration (in other words, firm only consider $n^{d}$ and we suppose the equilibrium $n^{s}=n^{d}$).
+
+Similar to the consumer's problem, the difference between the dynamic model and the static model is that when we introduce $\rho$, there are workers who stay in their job for the next period. Variables could be different in each time period, so we have the subscript.
+
+\subsubsection*{f.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+The Lagrangian:
+\begin{align*}
+    \quad\mathcal{L} & = \sum_{t=0}^{\infty}\left(\dfrac{1}{\displaystyle\prod_{i=0}^{t}\left(1+r_{i}\right)}\left(\left(A_{t}f\left(n_{t}\right)-w_{t}n_{t}-\omega_{t} v_{t}\right)-\mu^{f}_{t}\left(n_{t}-\left(1-\rho\right)n_{t-1}-v_{t}q_{t}\right)\right)\right)&\\
+    &=\dots&\\
+    &\quad+A_{t}f\left(n_{t}\right)-w_{t}n_{t}-\omega_{t} v_{t}&\\
+    &\quad\quad-\mu^{f}_{t}\left(n_{t}-\left(1-\rho\right)n_{t-1}-v_{t}q_{t}\right)&\\
+    &\quad+\dfrac{1}{1+r_{t}}A_{t+1}f\left(n_{t+1}\right)-w_{t+1}n_{t+1}-\omega_{t+1} v_{t+1}&\\
+    &\quad\quad-\dfrac{1}{1+r_{t}}\mu^{f}_{t+1}\left(n_{t+1}-\left(1-\rho\right)n_{t}-v_{t+1}q_{t+1}\right)&\\
+    &\quad+\dots
+\end{align*}%
+}%
+}
+
+The choice variables: $\boxed{n_{t+1}$, $v_{t+1}}$ (in the period $t$).
+
+The given variables: $\boxed{r_{t}$, $A_{t}$, $q_{t}$, $w_{t}$, $\rho$, $\omega}$.
+
+\subsubsection*{g.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+    FOCs:
+
+    w.r.t $n_{t}$:
+    \begin{flalign} \label{eq:1.8}
+        A_{t}f^{\prime}\left(n_{t}\right)-w_{t}-\mu^{f}_{t}+\dfrac{1}{1+r_{t}}\mu^{f}_{t+1}\left(1-\rho\right)&=0& \tag{1.8}
+    \end{flalign}
+
+    w.r.t $v_{t}$:
+    \begin{flalign*} \label{eq:1.9}
+        -\omega_{t}+\mu^{f}_{t}q_{t}&=0& \tag{1.9}
+    \end{flalign*}%
+}%
+}
+
+\eqref{eq:1.9} $\iff$\begin{flalign*} 
+    \mu^{f}_{t}q_{t}&=\omega_{t}&
+\end{flalign*}
+
+$\iff$
+\begin{flalign*} 
+    \mu^{f}_{t}&=\dfrac{\omega_{t}}{q_{t}}&
+\end{flalign*}
+
+And
+\begin{flalign*} 
+    \mu^{f}_{t+1}&=\dfrac{\omega_{t+1}}{q_{t+1}}&
+\end{flalign*}
+
+Plug into \eqref{eq:1.8}, we get:
+\begin{flalign*} 
+    A_{t}f^{\prime}\left(n_{t}\right)-w_{t}-\dfrac{\omega_{t}}{q_{t}}+\dfrac{1}{1+r_{t}}\dfrac{\omega_{t+1}}{q_{t+1}}\left(1-\rho\right)&=0& 
+\end{flalign*}
+
+\begin{flalign*} \label{eq:1.10}
+    \dfrac{\omega_{t}}{q_{t}}&=A_{t}f^{\prime}\left(n_{t}\right)-w_{t}+\dfrac{1}{1+r_{t}}\dfrac{\omega_{t+1}}{q_{t+1}}\left(1-\rho\right)& \tag{1.10}
+\end{flalign*}
+
+\subsubsection*{h.}
+
+Vacancy Posting Condition is determined by:
+
+For the workers already hired by the firm, maximize the profit in the factory.
+
+Make the decision of keeping workers and posting new vacancies, across periods.
+
+If $q^{f}_{t+1}$ increases, the marginal benefit of posting a vacancy decreases. Lower probability of successfully hiring a suitable job candidate discourages the firm from posting. 
+
+If $\rho$ increases, the marginal benefit of posting a vacancy decreases. The firm has to post less jobs due to the job retention ``constraint".
+
+If $r_{t}$ increases, the marginal benefit of posting a vacancy decreases. Firms will be more impatient, attach importance to the workers' performance in the short run, thus increasing the vacancy posted once the firm is unsatisfied with workers.
+
+\subsubsection*{i.}
+
+The matching function:
+\begin{flalign*} \label{eq:1.11}
+    m\left(s_{t},v_{t}\right)&=s^{\gamma}_{t}v^{1-\gamma}_{t}& \tag{1.11}
+\end{flalign*}
+
+Market tightness:
+\begin{flalign*} \label{eq:1.12}
+    \theta_{t}&=\dfrac{v_{t}}{s_{t}}& \tag{1.12}
+\end{flalign*}
+
+By definition:
+\begin{flalign*} \label{eq:1.13}
+    m\left(s_{t},v_{t}\right)&=s_{t}p^{f}_{t}& \tag{1.13}
+\end{flalign*}
+\begin{flalign*} \label{eq:1.14}
+    m\left(s_{t},v_{t}\right)&=v_{t}q_{t}& \tag{1.14}
+\end{flalign*}
+
+In equilibrium:
+\begin{flalign*} \label{eq:1.15}
+    n_{t}&=n^{s}_{t}& \tag{1.15}
+\end{flalign*}
+
+Good market clearing condition:
+\begin{flalign*} \label{eq:1.16}
+    c_{t}&=A_{t}f\left(n_{t}\right)& \tag{1.16}
+\end{flalign*}
+
+We also have:
+\begin{flalign*} \label{eq:1.17}
+    \dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}&=\dfrac{1}{1+r_{t}}& \tag{1.17}
+\end{flalign*}
+
+By \eqref{eq:1.1}, \eqref{eq:1.7} \& \eqref{eq:1.15} we get:
+
+$\left(1-\rho\right)n_{t-1}+p^{f}_{t}s_{t}=\left(1-\rho\right)n_{t-1}+v_{t}q_{t}$
+
+$p^{f}_{t}s_{t}=v_{t}q_{t}\equiv m\left(s_{t},v_{t}\right)$
+
+$\therefore p^{f}_{t}=\dfrac{s^{\gamma}_{t}v^{1-\gamma}_{t}}{s_{t}}=\left(\dfrac{v_{t}}{s_{t}}\right)^{1-\gamma}=\theta^{1-\gamma}_{t}$
+
+$q_{t}=\dfrac{s^{\gamma}_{t}v^{1-\gamma}_{t}}{v_{t}}=\left(\dfrac{s_{t}}{v_{t}}\right)^{\gamma}=\left(\dfrac{v_{t}}{s_{t}}\right)^{-\gamma}=\theta^{-\gamma}_{t}$
+\begin{flalign*} \label{eq:1.18}
+    p^{f}_{t}&=\theta^{1-\gamma}_{t}& \tag{1.18}
+\end{flalign*}
+\begin{flalign*} \label{eq:1.19}
+    q_{t}&=\theta^{-\gamma}_{t}& \tag{1.19}
+\end{flalign*}
+
+We assume
+\begin{flalign*} \label{eq:1.20}
+    b&=0& \tag{1.20}
+\end{flalign*}
+\begin{flalign*} \label{eq:1.21}
+    t_{t}&=0& \tag{1.21}
+\end{flalign*}
+
+Plug \eqref{eq:1.20} \& \eqref{eq:1.21} into \eqref{eq:1.2} we have:
+\begin{flalign*} \label{eq:1.22}
+    c_{t}&=w_{t}n^{s}_{t}& \tag{1.22}
+\end{flalign*}
+
+Plug \eqref{eq:1.20} \& \eqref{eq:1.21} into \eqref{eq:1.6} we have:
+\begin{flalign*} \label{eq:1.23}
+    \dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}&=p^{f}_{t}w_{t}+\dfrac{\beta p^{f}_{t}\dfrac{1-p^{f}_{t+1}}{p^{f}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}& \tag{1.23}
+\end{flalign*}
+
+By \eqref{eq:1.18} \& \eqref{eq:1.23}:
+\begin{flalign*} \label{eq:1.24}
+    \dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(c_{t}\right)}&=\theta^{1-\gamma}_{t}w_{t}+\dfrac{\beta \theta^{1-\gamma}_{t}\dfrac{1-\theta^{1-\gamma}_{t+1}}{\theta^{1-\gamma}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}& \tag{1.24}
+\end{flalign*}
+
+By \eqref{eq:1.10} \& \eqref{eq:1.19} \& \eqref{eq:1.17}:
+\begin{flalign*} \label{eq:1.25}
+    \dfrac{\omega_{t}}{\theta^{-\gamma}_{t}}&=A_{t}f^{\prime}\left(n_{t}\right)-w_{t}+\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}\dfrac{\omega_{t+1}}{\theta^{-\gamma}_{t+1}}\left(1-\rho\right)& \tag{1.25}
+\end{flalign*}
+
+By \eqref{eq:1.16} \& \eqref{eq:1.22}:
+\begin{flalign*} 
+    A_{t}f\left(n_{t}\right)&=w_{t}n^{s}_{t}& 
+\end{flalign*}
+\begin{flalign*} 
+    \therefore A_{t}f^{\prime}\left(n_{t}\right)&=\dfrac{\partial w_{t}}{\partial n_{t}}n_{t}+w_{t}& 
+\end{flalign*}
+\begin{flalign*} \label{eq:1.26}
+    \dfrac{\omega_{t}}{\theta^{-\gamma}_{t}}&=A_{t}f^{\prime}\left(n_{t}\right)-w_{t}+\dfrac{\beta u^{\prime}\left(c_{t+1}\right)}{u^{\prime}\left(c_{t}\right)}\dfrac{\omega_{t+1}}{\theta^{-\gamma}_{t+1}}\left(1-\rho\right)& \tag{1.26}
+\end{flalign*}
+
+With \eqref{eq:1.15}, \eqref{eq:1.22}, \eqref{eq:1.24} \& \eqref{eq:1.26}:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} 
+    \dfrac{h^{\prime}\left(lfp_{t}\right)}{u^{\prime}\left(w_{t}n_{t}\right)}&=\theta^{1-\gamma}_{t}w_{t}+\dfrac{\beta \theta^{1-\gamma}_{t}\dfrac{1-\theta^{1-\gamma}_{t+1}}{\theta^{1-\gamma}_{t+1}}\left(1-\rho\right)h^{\prime}\left(lfp_{t+1}\right)}{u^{\prime}\left(w_{t}n_{t}\right)}& 
+\end{flalign*}
+\begin{flalign*} 
+    \dfrac{\omega_{t}}{\theta^{-\gamma}_{t}}&=A_{t}f^{\prime}\left(n_{t}\right)-w_{t}+\dfrac{\beta u^{\prime}\left(w_{t+1}n_{t+1}\right)}{u^{\prime}\left(w_{t}n_{t}\right)}\dfrac{\omega_{t+1}}{\theta^{-\gamma}_{t+1}}\left(1-\rho\right)& 
+\end{flalign*}%
+}%
+}
+
+\subsection*{2. Optimal Policy in the NK model}
+
+\subsubsection*{a.}
+
+Solving consumer's problem $\implies$ Solving retail firm's problem $\implies$ Solving wholesale firm's problem and get NKPC $\implies$ Introducing government's problem $\implies$ Summarize equilibrium conditions and substitute, solving system of equation $\implies$ Imposing steady state $\implies$ Maximizing government's goal $\implies$ Modifying conditions to get optimal policy.
+
+\subsubsection*{b.}
+
+Consumer's problem:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{equation*}
+    \begin{aligned}
+    & \quad\max\sum_{s=0}^{\infty}\beta^{s}u\left(c_{t},1-n_{t}\right)&\\
+     \textrm{subject to}&\\
+    & P_{t}c_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}=P_{t}w_{t}n_{t}+B_{t-1}+\left(S_{t}+D_{t}\right)a_{t-1}.
+    \end{aligned}
+\end{equation*}%
+}%
+}
+
+The Lagrangian:
+\begin{align*}
+    \quad\mathcal{L} & = \sum_{s=0}^{\infty}\beta^{s}u\left(c_{t},1-n_{t}\right)& \\
+    &\quad\quad-\lambda_{t}\left(P_{t}c_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}-P_{t}w_{t}n_{t}-B_{t-1}-\left(S_{t}+D_{t}\right)a_{t-1}\right)&\\
+    &\quad\quad-\beta\lambda_{t+1}\left(P_{t+1}c_{t+1}+P^{b}_{t+1}B_{t+1}+S_{t+1}a_{t+1}-P_{t+1}w_{t+1}n_{t+1}-B_{t}-\left(S_{t+1}+D_{t+1}\right)a_{t}\right)&\\
+    &\quad\quad+\dots
+\end{align*}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+FOCs
+
+w.r.t $c_{t}$:
+\begin{flalign} \label{eq:2.1}
+    u_{1}\left(c_{t},1-n_{t}\right)-\lambda_{t}P_{t}&=0& \tag{2.1}
+\end{flalign}
+
+w.r.t $n_{t}$:
+\begin{flalign} \label{eq:2.2}
+    u_{2}\left(c_{t},1-n_{t}\right)+\lambda_{t}P_{t}w_{t}&=0& \tag{2.2}
+\end{flalign}
+
+where $u_{2}=u_{l}=-u_{n}$
+
+w.r.t $B_{t}$:
+\begin{flalign} \label{eq:2.3}
+    -\lambda_{t}P^{b}_{t}+\beta\lambda_{t+1}&=0& \tag{2.3}
+\end{flalign}
+
+w.r.t $a_{t}$:
+\begin{flalign} \label{eq:2.4}
+    -\lambda_{t}S_{t}+\beta\lambda_{t+1}\left(S_{t+1}+D_{t+1}\right)&=0& \tag{2.4}
+\end{flalign}
+
+w.r.t $\lambda_{t}$:
+\begin{flalign} \label{eq:2.5}
+    P_{t}c_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}&=P_{t}w_{t}n_{t}+B_{t-1}+\left(S_{t}+D_{t}\right)a_{t-1}& \tag{2.5}
+\end{flalign}%
+}%
+}
+
+\subsubsection*{c.}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+Resource constraint:
+\begin{flalign} \label{eq:2.6}
+    c_{t}+\dfrac{\psi}{2}\left(\pi_{t}\right)^{2}&=n_{t}& \tag{2.6}
+\end{flalign}%
+}%
+}
+
+Since we assume CRS production function
+
+$\quad y_{t}=n_{t}$,
+
+resource constraint implies that the market clears. Otherwise, resources haven't been used or overused, and both consumer and firm can make the best of this situation and become better.
+
+\subsubsection*{d.}
+
+Divide \eqref{eq:2.2} with \eqref{eq:2.1} we have:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign} \label{eq:2.7}
+    \dfrac{u_{2}\left(c_{t},1-n_{t}\right)}{u_{1}\left(c_{t},1-n_{t}\right)}&=w_{t}& \tag{2.7}
+\end{flalign}%
+}%
+}
+
+By \eqref{eq:2.1} we have:
+
+\begin{flalign} \label{eq:2.8}
+    u_{1}\left(c_{t},1-n_{t}\right)&=\lambda_{t}P_{t}& \tag{2.8}
+\end{flalign}
+
+\begin{flalign} \label{eq:2.9}
+    u_{1}\left(c_{t+1},1-n_{t+1}\right)&=\lambda_{t+1}P_{t+1}& \tag{2.9}
+\end{flalign}
+
+Divide \eqref{eq:2.8} with \eqref{eq:2.9} we have:
+\begin{flalign} \label{eq:2.10}
+    \dfrac{u_{1}\left(c_{t},1-n_{t}\right)}{u_{1}\left(c_{t+1},1-n_{t+1}\right)}&=\dfrac{\lambda_{t}P_{t}}{\lambda_{t+1}P_{t+1}}& \tag{2.10}
+\end{flalign}
+
+By the definition of the inflation, we have:
+\begin{flalign} \label{eq:2.11}
+    1+\pi_{t+1}&=\dfrac{P_{t+1}}{P_{t}}& \tag{2.11}
+\end{flalign}
+
+By \eqref{eq:2.10} and \eqref{eq:2.11} we get:
+\begin{flalign} \label{eq:2.12}
+    \dfrac{u_{1}\left(c_{t},1-n_{t}\right)}{u_{1}\left(c_{t+1},1-n_{t+1}\right)}&=\dfrac{\lambda_{t}}{\lambda_{t+1}}\cdot\dfrac{1}{\left(1+\pi_{t+1}\right)}& \tag{2.12}
+\end{flalign}
+
+By \eqref{eq:2.3} we have:
+
+$\quad \lambda_{t}P^{b}_{t}=\beta\lambda_{t+1}$
+
+$\iff$
+
+$\quad \lambda_{t}=\dfrac{\beta\lambda_{t+1}}{P^{b}_{t}}$
+\begin{flalign} \label{eq:2.13}
+    \dfrac{1}{P^{b}_{t}}&=\dfrac{\lambda_{t}}{\beta\lambda_{t+1}}& \tag{2.13}
+\end{flalign}
+
+By the definition of the interest rate, we have:
+\begin{flalign} \label{eq:2.14}
+    \dfrac{1}{P^{b}_{t}}&=1+i_{t}& \tag{2.14}
+\end{flalign}
+
+Plug in \eqref{eq:2.13} we get:
+\begin{flalign*} 
+    \dfrac{\lambda_{t}}{\beta\lambda_{t+1}}&=1+i_{t}& 
+\end{flalign*}
+
+Plug this equation back to the \eqref{eq:2.12} we get:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign} \label{eq:2.15}
+    \dfrac{u_{1}\left(c_{t},1-n_{t}\right)}{\beta u_{1}\left(c_{t+1},1-n_{t+1}\right)}&=\dfrac{1+i_{t}}{1+\pi_{t+1}}& \tag{2.15}
+\end{flalign}%
+}%
+}
+
+We also have:
+\begin{flalign} \label{eq:2.16}
+    mc_{t}&=w_{t}& \tag{2.16}
+\end{flalign}
+
+Because $mp_{t}=f^{\prime}\left(n_{t}\right)=\dfrac{\partial n_{t}}{\partial n_{t}}=1>mc_{t}$
+
+Labor demand condition:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign} \label{eq:2.17}
+    w_{t}&<1& \tag{2.17}
+\end{flalign}%
+}%
+}
+
+By the previous chapter and A5, we have the NKPC:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign} \label{eq:2.18}
+    \dfrac{1}{1-\varepsilon}\left(1-\varepsilon mc_{t}\right)n_{t}-\psi\pi_{t}\left(1+\pi_{t}\right)+\beta\psi\pi_{t+1}\left(1+\pi_{t+1}\right)&=0& \tag{2.18}
+\end{flalign}%
+}%
+}
+
+And the resource constraint \eqref{eq:2.6}:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} 
+    c_{t}+\dfrac{\psi}{2}\left(\pi_{t}\right)^{2}&=n_{t}& 
+\end{flalign*}%
+}%
+}
+
+\subsubsection*{e.}
+
+From \eqref{eq:2.6} \& \eqref{eq:2.7} \& \eqref{eq:2.16} we get:
+\begin{flalign} \label{eq:2.19}
+    \dfrac{u_{2}\left(c_{t},1-c_{t}-\dfrac{\psi}{2}\left(\pi_{t}\right)^{2}\right)}{u_{1}\left(c_{t},1-c_{t}-\dfrac{\psi}{2}\left(\pi_{t}\right)^{2}\right)}&=mc_{t}& \tag{2.19}
+\end{flalign}
+
+Substitute \eqref{eq:2.19} into \eqref{eq:2.15} we have:
+\begin{flalign*} \label{eq:2.20}
+    \dfrac{u_{1}\left(c_{t},1-c_{t}-\dfrac{\psi}{2}\left(\pi_{t}\right)^{2}\right)}{\beta u_{1}\left(c_{t+1},1-c_{t+1}-\dfrac{\psi}{2}\left(\pi_{t+1}\right)^{2}\right)}&=\dfrac{1+i_{t}}{1+\pi_{t+1}}& \tag{2.20}
+\end{flalign*}
+
+Substitute \eqref{eq:2.19} into \eqref{eq:2.18} we have:
+\begin{flalign*} \label{eq:2.21}
+    \dfrac{1}{1-\varepsilon}\left(1-\dfrac{\varepsilon u_{2}\left(c_{t},1-c_{t}-\dfrac{\psi}{2}\pi_{t}^{2}\right)}{u_{1}\left(c_{t},1-c_{t}-\dfrac{\psi}{2}\pi_{t}^{2}\right)}\right)\left(c_{t}+\dfrac{\psi}{2}\pi_{t}^{2}\right)-\psi\pi_{t}\left(1+\pi_{t}\right)+\beta\psi\pi_{t+1}\left(1+\pi_{t+1}\right)&=0& \tag{2.21}
+\end{flalign*}
+
+In the steady state, rewriting \eqref{eq:2.19} \& \eqref{eq:2.20} \& \eqref{eq:2.21}:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign} \label{eq:2.22}
+    \dfrac{u_{2}\left(c,1-c-\dfrac{\psi}{2}\pi^{2}\right)}{u_{1}\left(c,1-c-\dfrac{\psi}{2}\pi^{2}\right)}&=w& \tag{2.22}
+\end{flalign}%
+}%
+}
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} \label{eq:2.23}
+    \dfrac{u_{1}\left(c,1-c-\dfrac{\psi}{2}\pi^{2}\right)}{\beta u_{1}\left(c,1-c-\dfrac{\psi}{2}\pi^{2}\right)}&=\dfrac{1+i}{1+\pi}& \tag{2.23}
+\end{flalign*}%
+}%
+}
+
+\begin{flalign*} \label{eq:2.24}
+    \dfrac{1}{1-\varepsilon}\left(1-\dfrac{\varepsilon u_{2}\left(c,1-c-\dfrac{\psi}{2}\pi^{2}\right)}{u_{1}\left(c,1-c-\dfrac{\psi}{2}\pi^{2}\right)}\right)\left(c+\dfrac{\psi}{2}\pi^{2}\right)-\psi\pi\left(1+\pi\right)+\beta\psi\pi\left(1+\pi\right)&=0& \tag{2.24}
+\end{flalign*}
+
+Also, 
+\begin{flalign} \label{eq:2.25}
+    g&=\pi& \tag{2.25}
+\end{flalign}
+in a steady state. Plug into \eqref{eq:2.24}:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{flalign*} \label{eq:2.26}
+    \dfrac{1}{1-\varepsilon}\left(1-\dfrac{\varepsilon u_{2}\left(c,1-c-\dfrac{\psi}{2}g^{2}\right)}{u_{1}\left(c,1-c-\dfrac{\psi}{2}g^{2}\right)}\right)\left(c+\dfrac{\psi}{2}g^{2}\right)-\psi g\left(1+\pi\right)+\beta\psi g\left(1+g\right)&=0& \tag{2.26}
+\end{flalign*}%
+}%
+}
+
+\subsubsection*{f.}
+
+Optimal monetary policy problem:
+
+\fbox{%
+	\parbox{1\linewidth}{%
+\begin{equation*}
+    \begin{aligned}
+    & \quad\max_{g}\sum_{s=0}^{\infty}\beta^{s}u\left(\bar{c}\left(g\right),1-\bar{c}\left(g\right)-\dfrac{\psi}{2}g^{2}\right)
+    \end{aligned}
+\end{equation*}%
+}%
+}
+
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+    & \quad\max_{g} \dfrac{u\left(\bar{c}\left(g\right),1-\bar{c}\left(g\right)-\dfrac{\psi}{2}g^{2}\right)}{1-\beta}
+    \end{aligned}
+\end{equation*}
+
+The policy tries to maximize the utility of the society. In the representative case, it is the same with maximizing consumer's utility.
+
+The choice variable is $g$.
+
+\subsubsection*{g.}
+
+FOC w.r.t $g$:
+
+$\quad u_{1}\dfrac{\partial \bar{c}\left(g\right)}{\partial g}+u_{2}\cdot\dfrac{\partial \left(1-\bar{c}\left(g\right)-\dfrac{\psi}{2}g^{2}\right)}{\partial g}=0$
+
+$\iff$
+
+$\quad u_{1}c^{\prime}\left(g\right)+u_{2}\left(-c^{\prime}\left(g\right)-\psi g\right)=0$
+
+$\iff$
+
+$\quad u_{1}c^{\prime}\left(g\right)=u_{2}\left(c^{\prime}\left(g\right)+\psi g\right)$
+
+$\iff$
+
+$\quad \dfrac{u_{2}\left(c\left(g\right), 1-c\left(g\right)-\dfrac{\psi}{2}g^{2}\right)}{u_{1}\left(c\left(g\right), 1-c\left(g\right)-\dfrac{\psi}{2}g^{2}\right)}=\dfrac{c^{\prime}\left(g\right)}{c^{\prime}\left(g\right)+\psi g}$
+
+\subsubsection*{h.}
+
+Introduce $\varepsilon$ in the steady state NKPC \eqref{eq:2.26}:
+\begin{flalign*} 
+    \dfrac{1}{1-\varepsilon}\left(1-\dfrac{\varepsilon u_{2}\left(c,1-c-\dfrac{\psi}{2}g^{2}\right)}{\boxed{\varepsilon} u_{1}\left(c,1-c-\dfrac{\psi}{2}g^{2}\right)}\right)\left(c+\dfrac{\psi}{2}g^{2}\right)-\psi g\left(1+\pi\right)+\beta\psi g\left(1+g\right)&=0& 
+\end{flalign*}
+
+And we assume $\psi=0$.
+
+By inspection, $\dfrac{u_{2}\left(c\left(g\right), 1-c\left(g\right)\right)}{u_{1}\left(c\left(g\right), 1-c\left(g\right)\right)}=1$ solves this problem. That is, $g^{*}=0$.
+
+Zero inflation eliminates the menu cost, which has no benefit. Thus there is no need to change prices in this model, and the private market achieves efficiency. 
+
+\end{document}

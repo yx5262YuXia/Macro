@@ -1,0 +1,944 @@
+% Name: Yu Xia's A5 v3
+% Author: Yu Xia 
+% Description: The version before submitted (to be cont.)
+% Last Updated: Nov 9, 2022
+
+\documentclass{article}
+
+\usepackage{titlesec}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{a4wide}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+
+\usepackage{listings}
+\lstdefinestyle{mystyle}{
+    basicstyle=\ttfamily
+}
+
+\lstset{style=mystyle
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+
+\titleformat*{\section}{\Large\rmfamily\bfseries}
+
+\titleformat*{\subsection}{\large\rmfamily\bfseries}
+
+\titleformat*{\subsubsection}{\normalfont\rmfamily}
+
+\titleformat*{\paragraph}{\normalfont\rmfamily}
+
+\author{Yu Xia \\ ID: yx5262}
+\title{\textbf{Yu Xia's A5}}
+\date{Fall 2022}
+
+\begin{document}
+\maketitle
+
+\nocite{*}
+
+\section*{Multiple Choice}
+
+1-5:\\
+aacab
+
+6-10:\\
+fbdcd
+
+11-15:\\
+aa(ab)(bc)c
+
+\section*{Long}
+
+\subsection*{1. M2 Holdings}
+
+\subsubsection*{a.}
+
+$\chi<1$ means that liquidity dominates. Holding $M^{2}_{t}$ makes me less happy than holding $M^{1}_{t}$. It's reasonable because $M^{2}_{t}$ is less liquid, which makes it less convenient to hold. 
+
+However, $\chi$ could be larger than 1, since there are many factors affecting $\chi$. For example, the difference in interest rates. If the return of $M^{2}_{t}$ will makes me wealthier in the next period, all else equal, I will be able to consume more or hold change $M^{1}_{t}$ $M^{2}_{t}$, thus increase my utility.  
+
+\subsubsection*{b.}
+
+$MRS_{23}\left(c_{t}, \dfrac{M^{1}_{t}}{P_{t}},\dfrac{M^{2}_{t}}{P_{t}}\right)=\dfrac{\dfrac{\partial u\left(c_{t}, \dfrac{M^{1}_{t}}{P_{t}}, \dfrac{M^{2}_{t}}{P_{t}}\right)}{\partial \dfrac{M^{1}_{t}}{P_{t}}}}{\dfrac{\partial u\left(c_{t}, \dfrac{M^{1}_{t}}{P_{t}}, \dfrac{M^{2}_{t}}{P_{t}}\right)}{\partial \dfrac{M^{2}_{t}}{P_{t}}}}=\dfrac{\dfrac{1}{\dfrac{M^{1}_{t}}{P_{t}}}}{\dfrac{\chi}{\dfrac{M^{2}_{t}}{P_{t}}}}=\dfrac{\dfrac{P_{t}}{M^{1}_{t}}}{\dfrac{\chi P_{t}}{M^{2}_{t}}}=\dfrac{\dfrac{1}{M^{1}_{t}}}{\dfrac{\chi}{M^{2}_{t}}}=\dfrac{1}{M^{1}_{t}}\cdot\dfrac{M^{2}_{t}}{\chi}=\dfrac{M^{2}_{t}}{\chi M^{1}_{t}}$
+
+\subsubsection*{c.}
+
+Denote 
+
+$u\left(c_{T}, \dfrac{M^{1}_{T}}{P_{T}}, \dfrac{M^{2}_{T}}{P_{T}}\right)=u_{t=T}=u_{T}$
+
+$\dfrac{\partial u\left(c_{T}, \dfrac{M^{1}_{T}}{P_{T}}, \dfrac{M^{2}_{T}}{P_{T}}\right)}{\partial c_{T}}=u^{\prime}_{1,t=T}=u^{\prime}_{1,T}$
+
+$\dfrac{\partial u\left(c_{T}, \dfrac{M^{1}_{T}}{P_{T}}, \dfrac{M^{2}_{T}}{P_{T}}\right)}{\partial \dfrac{M^{1}_{T}}{P_{T}}}=u^{\prime}_{2,t=T}=u^{\prime}_{2,T}$
+
+$\dfrac{\partial u\left(c_{T}, \dfrac{M^{1}_{T}}{P_{T}}, \dfrac{M^{2}_{T}}{P_{T}}\right)}{\partial \dfrac{M^{2}_{t}}{P_{t}}}=u^{\prime}_{3,t=T}=u^{\prime}_{3,T}$
+
+$\dfrac{\partial u\left(c_{t}, \dfrac{M^{1}_{t}}{P_{t}}, \dfrac{M^{2}_{t}}{P_{t}}\right)}{\partial M^{1}_{t}}=\dfrac{P_{t}}{M^{1}_{t}}\cdot \dfrac{1}{P_{t}}=\dfrac{1}{M^{1}_{t}}$
+
+$\dfrac{\partial u\left(c_{t}, \dfrac{M^{2}_{t}}{P_{t}}, \dfrac{M^{2}_{t}}{P_{t}}\right)}{\partial M^{2}_{t}}=\chi\cdot\dfrac{P_{t}}{M^{2}_{t}}\cdot \dfrac{1}{P_{t}}=\dfrac{\chi}{M^{2}_{t}}$
+
+Rewriting the budget constraint, we have:
+
+$P_{t}c_{t}+M^{1}_{t}+M^{2}_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}-Y_{t}-M^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)M^{2}_{t-1}-B_{t-1}-\left(S_{t}+D_{t}\right)a_{t-1}=0$
+
+Lagrangian:
+\begin{alignat*}{1}
+    \mathcal{L} &= \sum_{s=0}^{\infty}\beta^{s}u_{t+s}\left(c_{t+s}, \dfrac{M^{2}_{t+s}}{P_{t+s}}, \dfrac{M^{2}_{t+s}}{P_{t+s}}\right) \\
+    &\qquad-\lambda_{t}\left(P_{t}c_{t}+M^{1}_{t}+M^{2}_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}-Y_{t}-M^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)M^{2}_{t-1}-B_{t-1}-\left(S_{t}+D_{t}\right)a_{t-1}\right)\\
+    &\qquad-\beta\lambda_{t+1}\bigl(P_{t+1}c_{t+1}+M^{1}_{t+1}+M^{2}_{t+1}+P^{b}_{t+1}B_{t+1}+S_{t+1}a_{t+1} \notag\\
+    &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\quad\quad\quad-Y_{t+1}-M^{1}_{t}-\left(1+i^{M}_{t}\right)M^{2}_{t}-B_{t}-\left(S_{t+1}+D_{t+1}\right)a_{t}\bigr)\\
+    &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad+\dotsb
+\end{alignat*}
+
+Equivalently,
+\begin{alignat*}{1}
+    \mathcal{L} &= \sum_{s=0}^{\infty}\beta^{s}\left(\ln\left(c_{t+s}\right)+\ln\left(\dfrac{M^{1}_{t+s}}{P_{t+s}}\right)+\chi\ln\left(\dfrac{M^{2}_{t+s}}{P_{t+s}}\right)\right) \\
+    &\qquad-\lambda_{t}\left(P_{t}c_{t}+M^{1}_{t}+M^{2}_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}-Y_{t}-M^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)M^{2}_{t-1}-B_{t-1}-\left(S_{t}+D_{t}\right)a_{t-1}\right)\\
+    &\qquad-\beta\lambda_{t+1}\bigl(P_{t+1}c_{t+1}+M^{1}_{t+1}+M^{2}_{t+1}+P^{b}_{t+1}B_{t+1}+S_{t+1}a_{t+1} \notag\\
+    &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad\quad\quad\quad-Y_{t+1}-M^{1}_{t}-\left(1+i^{M}_{t}\right)M^{2}_{t}-B_{t}-\left(S_{t+1}+D_{t+1}\right)a_{t}\bigr)\\
+    &\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad\quad+\dotsb
+\end{alignat*}
+
+FOC w.r.t. $c_{t}$:
+
+$\dfrac{1}{c_{t}}-\lambda_{t}P_{t}=0$
+
+$\iff$
+\begin{flalign} \label{eq:1.1}
+    \dfrac{1}{c_{t}}&=\lambda_{t}P_{t}& \tag{1.1}
+\end{flalign}
+
+FOC w.r.t. $M^{1}_{t}$:
+
+$\dfrac{P_{t}}{M^{1}_{t}}\cdot\dfrac{1}{P_{t}}-\lambda_{t}+\beta\lambda_{t+1}=0$
+
+$\iff$
+\begin{flalign} \label{eq:1.2}
+    \dfrac{1}{M^{1}_{t}}&=\lambda_{t}-\beta\lambda_{t+1}& \tag{1.2}
+\end{flalign}
+
+FOC w.r.t. $M^{2}_{t}$:
+
+$\dfrac{\chi P_{t}}{M^{2}_{t}}\cdot\dfrac{1}{P_{t}}-\lambda_{t}-\beta\lambda_{t+1}\left[-\left(1+i^{M}_{t}\right)\right]=0$
+
+$\iff$
+
+$\dfrac{\chi}{M^{2}_{t}}-\lambda_{t}+\beta\lambda_{t+1}\left(1+i^{M}_{t}\right)=0$
+
+$\iff$
+\begin{flalign} \label{eq:1.3}
+    \dfrac{\chi}{M^{2}_{t}}&=\lambda_{t}-\beta\lambda_{t+1}\left(1+i^{M}_{t}\right)& \tag{1.3}
+\end{flalign}
+
+$\therefore\dfrac{\dfrac{1}{M^{1}_{t}}}{\dfrac{\chi}{M^{2}_{t}}}=\dfrac{\lambda_{t}-\beta\lambda_{t+1}}{\lambda_{t}-\beta\lambda_{t+1}\left(1+i^{M}_{t}\right)}$
+
+$\iff$
+
+$\dfrac{M^{2}_{t}}{\chi M^{1}_{t}}=\dfrac{\lambda_{t}-\beta\lambda_{t+1}}{\lambda_{t}-\beta\lambda_{t+1}-\beta\lambda_{t+1}i^{M}_{t}}$
+
+$\iff$
+
+$\dfrac{\chi M^{1}_{t}}{M^{2}_{t}}=\dfrac{\lambda_{t}-\beta\lambda_{t+1}-\beta\lambda_{t+1}i^{M}_{t}}{\lambda_{t}-\beta\lambda_{t+1}}=1-\dfrac{\beta\lambda_{t+1}i^{M}_{t}}{\lambda_{t}-\beta\lambda_{t+1}}$
+
+FOC w.r.t. $B_{t}$:
+
+$-\lambda_{t}P^{b}_{t}-\beta\lambda_{t+1}\cdot\left(-1\right)=0$
+
+$\iff$
+
+$-\lambda_{t}P^{b}_{t}+\beta\lambda_{t+1}=0$
+
+$\iff$
+\begin{flalign} \label{eq:1.4}
+    \beta\lambda_{t+1}&=\lambda_{t}P^{b}_{t}& \tag{1.4}
+\end{flalign}
+
+According to definition:
+\begin{flalign} \label{eq:1.5}
+    1+i_{t}&=\dfrac{1}{P^{b}_{t}}& \tag{1.5}
+\end{flalign}
+
+$\therefore \beta\lambda_{t+1}=\lambda_{t}P^{b}_{t}=\dfrac{\lambda_{t}}{1+i_{t}}$
+
+FOC w.r.t. $a_{t}$:
+
+$-\lambda_{t}S_{t}-\beta\lambda_{t+1}\left(-\left(S_{t+1}+D_{t+1}\right)\right)=0$
+
+$\iff$
+
+$-\lambda_{t}S_{t}+\beta\lambda_{t+1}\left(S_{t+1}+D_{t+1}\right)=0$
+
+$\iff$
+\begin{flalign} \label{eq:1.6}
+    \lambda_{t}S_{t}&=\beta\lambda_{t+1}\left(S_{t+1}+D_{t+1}\right)& \tag{1.6}
+\end{flalign}
+
+According to definition:
+\begin{flalign} \label{eq:1.7}
+    1+i_{t}&=\dfrac{S_{t+1}+D_{t+1}}{S_{t}}& \tag{1.7}
+\end{flalign}
+
+$\therefore \lambda_{t}=\beta\lambda_{t+1}\left(\dfrac{S_{t+1}+D_{t+1}}{S_{t}}\right)=\beta\lambda_{t+1}\left(1+i_{t}\right)$
+
+$P_{t}, P^{b}_{t}, S_{t}, D_{t}, Y_{t}$ are given. The above equation holds similarly with \eqref{eq:1.5}, but $S_{t}$ and $D_{t}$ should be carefully chosen to avoid contradiction.
+
+Hence
+
+$\dfrac{\chi M^{1}_{t}}{M^{2}_{t}}=1-\dfrac{\beta\lambda_{t+1}i^{M}_{t}}{\beta\lambda_{t+1}\left(1+i_{t}\right)-\beta\lambda_{t+1}}=1-\dfrac{i^{M}_{t}}{1+i_{t}-1}=1-\dfrac{i^{M}_{t}}{i_{t}}$
+
+FOC w.r.t. $\lambda_{t}$:
+\begin{flalign} \label{eq:1.8}
+    P_{t}c_{t}+M^{1}_{t}+M^{2}_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}-Y_{t}-M^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)M^{2}_{t-1}-B_{t-1}-\left(S_{t}+D_{t}\right)a_{t-1}&=0& \tag{1.8}
+\end{flalign}
+
+Now let's replace $M^{1}_{t}$:
+
+$M^{1}_{t}=\dfrac{1}{\lambda_{t}-\beta\lambda_{t+1}}=\dfrac{1}{\lambda_{t}-\dfrac{\lambda_{t}}{1+i_{t}}}=\dfrac{1+i_{t}}{\left(1+i_{t}-1\right)\lambda_{t}}=\dfrac{1+i_{t}}{i_{t}\lambda_{t}}$
+
+$\because \lambda_{t}=\dfrac{1}{c_{t}P_{t}}$
+
+$\therefore \chi M^{1}_{t}=\dfrac{\chi \left(1+i_{t}\right)c_{t}P_{t}}{i_{t}}$
+
+$M^{2}_{t}=\dfrac{\chi M^{1}_{t}}{1-\dfrac{i^{M}_{t}}{i_{t}}}=\dfrac{\dfrac{\chi \left(1+i_{t}\right)c_{t}P_{t}}{i_{t}}}{1-\dfrac{i^{M}_{t}}{i_{t}}}=\dfrac{\chi \left(1+i_{t}\right)c_{t}P_{t}}{i_{t}-i^{M}_{t}}$
+
+$\boxed{\rho^{M_{2}}\left(c_{t}, i_{t}, i^{M}_{t}\right)=\dfrac{M^{2}_{t}}{P_{t}}=\dfrac{\chi \left(1+i_{t}\right)c_{t}}{i_{t}-i^{M}_{t}}}$
+
+Apart from some strange case where $\rho^{M_{2}}<0$, such as $i_{t}<i^{M}_{t}$,
+
+$c_{t}$: positively related to $\dfrac{M^{2}_{t}}{P_{t}}$. Holding all else equal, the more I consume, the more cash I need. 
+
+$i^{M}_{t}$: positively related to $\dfrac{M^{2}_{t}}{P_{t}}$. The more interest rate of $M_{2}$ is, the higher return it is, and the more worthwhile to invest.
+
+$i_{t}$: To see the relationship:
+
+$\rho^{M_{2}}\left(c_{t}, i_{t}, i^{M}_{t}\right)=\chi c_{t}\cdot\dfrac{1+i_{t}}{i_{t}-i^{M}_{t}}$
+
+$\dfrac{\partial \dfrac{1+i_{t}}{i_{t}-i^{M}_{t}}}{\partial i_{t}}=\dfrac{1\cdot\left(i_{t}-i^{M}_{t}\right)-\left(1+i_{t}\right)\cdot1}{\left(i_{t}-i^{M}_{t}\right)^{2}}=\dfrac{\left(i_{t}-i^{M}_{t}\right)-\left(1+i_{t}\right)}{\left(i_{t}-i^{M}_{t}\right)^{2}}=\dfrac{i_{t}-i^{M}_{t}-1-i_{t}}{\left(i_{t}-i^{M}_{t}\right)^{2}}=\dfrac{-\left(1+i^{M}_{t}\right)}{\left(i_{t}-i^{M}_{t}\right)^{2}}$
+
+Which is usually negative. 
+
+The higher $i_{t}$ is, consumers are more eager to substitute $M_{2}$ with bonds and stocks. 
+
+\subsubsection*{d.}
+
+Modeling after RBC slide, we assume that:
+
+\begin{flalign} \label{eq:1.9}
+    \ln\left(\chi_{t}\right)&=\Lambda \ln\left(\chi_{t-1}\right)+e_{t}& \tag{1.9}
+\end{flalign}
+
+where $\Lambda$ describes the persistence of productivity shock.
+
+Using \eqref{eq:1.1} across periods:
+
+$\dfrac{\dfrac{1}{c_{1}}}{\dfrac{1}{c_{t+1}}}=\dfrac{\lambda_{t}P_{t}}{\lambda_{t+1}P_{t+1}}=\dfrac{\lambda_{t}}{\lambda_{t+1}}\cdot\dfrac{P_{t}}{P_{t+1}}=\dfrac{\beta\lambda_{t+1}\left(1+i_{t}\right)}{\lambda_{t+1}}\cdot\dfrac{P_{t}}{P_{t+1}}=\dfrac{\beta\left(1+i_{t}\right)P_{t}}{P_{t+1}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.10}
+    \dfrac{c_{t+1}}{c_{t}}&=\dfrac{\beta\left(1+i_{t}\right)P_{t}}{P_{t+1}}& \tag{1.10}
+\end{flalign}
+
+Using \eqref{eq:1.2} across periods:
+
+$\dfrac{\dfrac{1}{M^{1}_{t}}}{\dfrac{1}{M^{1}_{t+1}}}=\dfrac{\lambda_{t}-\beta\lambda_{t+1}}{\lambda_{t+1}-\beta\lambda_{t+2}}=\dfrac{\beta\lambda_{t+1}\left(1+i_{t}\right)-\beta\lambda_{t+1}}{\beta\lambda_{t+2}\left(1+i_{t+1}\right)-\beta\lambda_{t+2}}=\dfrac{\beta\lambda_{t+1}i_{t}}{\beta\lambda_{t+2}i_{t+1}}=\dfrac{\lambda_{t+1}}{\lambda_{t+2}}\cdot\dfrac{i_{t}}{i_{t+1}}$
+
+$\iff$
+
+$\dfrac{M^{1}_{t+1}}{M^{1}_{t}}=\dfrac{\beta\lambda_{t+2}\left(1+i_{t+1}\right)}{\lambda_{t+2}}\cdot\dfrac{i_{t}}{i_{t+1}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.11}
+    \dfrac{M^{1}_{t+1}}{M^{1}_{t}}&=\dfrac{\beta\left(1+i_{t+1}\right)i_{t}}{i_{t+1}}& \tag{1.11}
+\end{flalign}
+
+Using \eqref{eq:1.3} across periods:
+
+$\dfrac{\dfrac{\chi_{t}}{M^{2}_{t}}}{\dfrac{\chi_{t}}{M^{2}_{t+1}}}=\dfrac{\lambda_{t}-\beta\lambda_{t+1}\left(1+i^{M}_{t}\right)}{\lambda_{t+1}-\beta\lambda_{t+2}\left(1+i^{M}_{t+1}\right)}=\dfrac{\beta\lambda_{t+1}\left(1+i_{t}\right)-\beta\lambda_{t+1}\left(1+i^{M}_{t}\right)}{\beta\lambda_{t+2}\left(1+i_{t+1}\right)-\beta\lambda_{t+2}\left(1+i^{M}_{t+1}\right)}=\dfrac{\beta\lambda_{t+1}\left(i_{t}-i^{M}_{t}\right)}{\beta\lambda_{t+2}\left(i_{t+1}-i^{M}_{t+1}\right)}$
+
+$\iff$
+
+$\dfrac{\chi_{t}}{M^{2}_{t}}\cdot\dfrac{M^{2}_{t+1}}{\chi_{t}}=\dfrac{\lambda_{t+1}\left(i_{t}-i^{M}_{t}\right)}{\lambda_{t+2}\left(i_{t+1}-i^{M}_{t+1}\right)}=\dfrac{\beta\lambda_{t+2}\left(1+i_{t+1}\right)\left(i_{t}-i^{M}_{t}\right)}{\lambda_{t+2}\left(i_{t+1}-i^{M}_{t+1}\right)}=\dfrac{\beta\left(1+i_{t+1}\right)\left(i_{t}-i^{M}_{t}\right)}{i_{t+1}-i^{M}_{t+1}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.12}
+    \dfrac{M^{2}_{t+1}}{M^{2}_{t}}&=\dfrac{\beta\left(1+i_{t+1}\right)\left(i_{t}-i^{M}_{t}\right)}{i_{t+1}-i^{M}_{t+1}}& \tag{1.12}
+\end{flalign}
+
+$MRS$ between $c_{t}$ and $M^{1}_{t}$:
+
+$\dfrac{\dfrac{1}{c_{t}}}{\dfrac{1}{M^{1}_{t}}}=\dfrac{\lambda_{t}P_{t}}{\lambda_{t}-\beta\lambda_{t+1}}=\dfrac{\beta\lambda_{t+1}\left(1+i_{t}\right)P_{t}}{\beta\lambda_{t+1}\left(1+i_{t}\right)-\beta\lambda_{t+1}}=\dfrac{\left(1+i_{t}\right)P_{t}}{i_{t}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.13}
+    M^{1}_{t}&=\dfrac{\left(1+i_{t}\right)P_{t}c_{t}}{i_{t}}& \tag{1.13}
+\end{flalign}
+
+By part \textrm{c.} we have:
+\begin{flalign} \label{eq:1.14}
+    M^{2}_{t}&=\dfrac{\chi_{t} \left(1+i_{t}\right)c_{t}P_{t}}{i_{t}-i^{M}_{t}}& \tag{1.14}
+\end{flalign}
+
+\eqref{eq:1.7} to \eqref{eq:1.14} solves $c, M_{1}, M_{2}, \chi, i, i^{M}, a_{t}, B_{t}$.
+
+Real prices case and Steady state are attached to the Appendix.
+
+\subsection*{2. Cash vs Credit goods}
+
+\subsubsection*{a.}
+
+\begin{equation*}
+    \begin{aligned}
+    & \max\sum_{s=0}^{\infty}\beta^{s}U\left(c_{1,t},c_{2,t}\right) \\
+     \textrm{subject to}\\
+    & P_{t}c_{1,t}+P_{t}c_{2,t}+M_{t}=P_{t}y_{t}+M_{t-1}+\tau_{t}, \\
+    & P_{t}c_{1,t}-M_{t-1}-\tau_{t}\leqslant0.
+    \end{aligned}
+\end{equation*}
+
+The Lagrangian:
+\begin{flalign*}
+    \mathcal{L} & = \sum_{s=0}^{\infty}\beta^{s}U\left(c_{1,t},c_{2,t}\right)& \\
+    &-\lambda_{t}\left(P_{t}c_{1,t}+P_{t}c_{2,t}+M_{t}-P_{t}y_{t}-M_{t-1}-\tau_{t}\right)& \\
+    &-\mu_{t}\left(P_{t}c_{1,t}-M_{t-1}-\tau_{t}\right)&\\
+    &-\beta\lambda_{t+1}\left(P_{t+1}c_{1,t+1}+P_{t}c_{2,t+1}+M_{t+1}-P_{t+1}y_{t+1}-M_{t}-\tau_{t+1}\right)&\\
+    &-\beta\mu_{t+1}\left(P_{t+1}c_{1,t+1}-M_{t}-\tau_{t+1}\right)&\\
+    &+\dots
+\end{flalign*}
+
+FOC w.r.t. $c_{1,t}$:
+
+$U_{1}\left(c_{1,t},c_{2,t}\right)-\lambda_{t}P_{t}-\mu_{t}P_{t}=0$
+\begin{flalign}\label{eq:2.1}
+    \dfrac{U_{1}\left(c_{1,t},c_{2,t}\right)}{P_{t}}&=\lambda_{t}+\mu_{t}& \tag{2.1} 
+\end{flalign}
+%(2.1)
+
+FOC w.r.t. $c_{2,t}$:
+
+$U_{2}\left(c_{1,t},c_{2,t}\right)-\lambda_{t}P_{t}=0$
+\begin{flalign} \label{eq:2.2}
+    \dfrac{U_{2}\left(c_{1,t},c_{2,t}\right)}{P_{t}}&=\lambda_{t}& \tag{2.2} 
+\end{flalign}
+%(2.2)
+
+FOC w.r.t. $M_{t}$:
+
+$-\lambda_{t}\times1-\beta\lambda_{t+1}\times\left(-1\right)-\beta\mu_{t+1}\times\left(-1\right)=0$ 
+
+$-\lambda_{t}+\beta\lambda_{t+1}+\beta\mu_{t+1}=0$
+\begin{flalign} \label{eq:2.3}
+    \lambda_{t}&=\beta\left(\lambda_{t+1}+\mu_{t+1}\right)& \tag{2.3}  
+\end{flalign}
+%(2.3)
+
+\subsubsection*{b.}
+
+FOC w.r.t. $\lambda_{t}$:
+\begin{flalign} \label{eq:2.4}
+    P_{t}c_{1,t}+P_{t}c_{2,t}+M_{t}-P_{t}y_{t}-M_{t-1}-\tau_{t}&=0& \tag{2.4} 
+\end{flalign}
+%(2.4)
+
+Kuhn-Tucker condition of $\mu_{t}$:
+\begin{flalign}\label{eq:2.5}
+    \mu_{t}\geqslant0\textrm{, with }\mu_{t}&=0\textrm{ if }P_{t}c_{1,t}-M_{t-1}-\tau_{t}<0& \tag{2.5} 
+\end{flalign}
+%(2.5)
+
+But we only consider the case where the equation holds. Cae 1 is in the Appendix.
+
+By \eqref{eq:2.1} we have:
+
+$\dfrac{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}{P_{t+1}}=\lambda_{t+1}+\mu_{t+1}$
+
+Plug this equation into \eqref{eq:2.3} we have:
+
+$\lambda_{t}=\beta\dfrac{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}{P_{t+1}}$
+
+Plug in \eqref{eq:2.2} we have:
+
+$\dfrac{U_{2}\left(c_{1,t},c_{2,t}\right)}{P_{t}}=\dfrac{\beta U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}{P_{t+1}}$
+
+$\iff$
+
+$\boxed{\dfrac{U_{2}\left(c_{1,t},c_{2,t}\right)}{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}=\dfrac{\beta P_{t}}{P_{t+1}}=\dfrac{\beta}{1+\pi_{t+1}}}$
+
+It also holds when $\mu_{t}=0$:
+
+$\therefore \dfrac{U_{1}\left(c_{1,t},c_{2,t}\right)}{P_{t}}=\lambda_{t}=\dfrac{U_{2}\left(c_{1,t},c_{2,t}\right)}{P_{t}}$
+
+$\iff$
+
+$\dfrac{U_{2}\left(c_{1,t},c_{2,t}\right)}{U_{1}\left(c_{1,t},c_{2,t}\right)}=1$
+
+We also have:
+
+$\lambda_{t}=\beta\lambda_{t+1}+0$
+
+Plug in \eqref{eq:2.1} or \eqref{eq:2.2}:
+
+$\dfrac{U_{1}\left(c_{1,t},c_{2,t}\right)}{P_{t}}=\beta\dfrac{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}{P_{t+1}}$
+
+$\dfrac{U_{1}\left(c_{1,t},c_{2,t}\right)}{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}=\dfrac{\beta P_{t}}{P_{t+1}}=\dfrac{\beta}{\dfrac{P_{t+1}}{P_{t}}}=\dfrac{\beta}{1+\pi_{t+1}}$
+
+Or,
+
+$U_{2}\left(c_{1,t},c_{2,t}\right)P_{t+1}=\beta U_{1}\left(c_{1,t+1},c_{2,t}\right)P_{t}$
+
+$\iff$
+
+$\dfrac{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}{U_{2}\left(c_{1,t},c_{2,t}\right)}=\dfrac{P_{t+1}}{\beta P_{t}}=1+\pi_{t+1}$
+
+The monetary budget constraint for authority is 
+\begin{flalign} \label{eq:2.6}
+    M^{s}_{t}&=M^{s}_{t-1}\left(1+g_{t}\right)& \tag{2.6} 
+\end{flalign}
+%(2.6)
+
+where
+\begin{flalign} \label{eq:2.7}
+    g_{t}&=\dfrac{M^{s}_{t}-M^{s}_{t-1}}{M^{s}_{t-1}}& \tag{2.7}
+\end{flalign}
+%(2.7)
+
+Money demand equals supply:
+\begin{flalign} \label{eq:2.8}
+    M_{t}&=M^{s}_{t}& \tag{2.8}
+\end{flalign}
+%(2.8)
+
+We only consider Case 1 here: $P_{t}c_{1,t}-M_{t-1}-\tau_{t}=0$
+
+$\iff$
+
+$P_{t}c_{1,t}=M_{t-1}+\tau_{t}=M_{t}$
+
+$\iff$
+
+$\dfrac{\dfrac{M_{t}}{M_{t-1}}}{\dfrac{P_{t}}{P_{t-1}}}=\dfrac{c_{t}}{c_{t-1}}$
+
+$\iff$
+
+$\dfrac{1+g_{t}}{1+\pi_{t}}=\dfrac{c_{t}}{c_{t-1}}$
+
+Thus in steady state:
+
+$\dfrac{1+g}{1+\pi}=\dfrac{\bar{c}}{\bar{c}}=1$
+
+$\iff$
+
+$g=\pi$
+
+$\because\dfrac{U_{2}\left(c_{1,t},c_{2,t}\right)}{U_{1}\left(c_{1,t+1},c_{2,t+1}\right)}=\dfrac{\beta P_{t}}{P_{t+1}}=\dfrac{\beta}{1+\pi_{t+1}}$
+
+$\therefore \boxed{\dfrac{U_{2}\left(\bar{c}_{1},\bar{c}_{2}\right)}{U_{1}\left(\bar{c}_{1},\bar{c}_{2}\right)}=\dfrac{\beta}{1+g}}$
+
+\subsubsection*{c.}
+
+The government's goal:
+
+$\displaystyle\max_{g}\sum^{\infty}_{s=0}\beta^{s}U\left(\bar{c}_{1},\bar{c}_{2}\right)=\max_{g}U\left(\bar{c}_{1},\bar{c}_{2}\right)\sum^{\infty}_{s=0}\beta^{s}=\max_{g}U\left(\bar{c}_{1},\bar{c}_{2}\right)\cdot\dfrac{1}{1-\beta}=\dfrac{\displaystyle\max_{g}U\left(\bar{c}_{1},\bar{c}_{2}\right)}{1-\beta}$
+
+FOC w.r.t. $g$:
+
+$U_{1}\dfrac{\partial \bar{c}_{1}}{\partial g}+U_{2}\dfrac{\partial \bar{c}_{2}}{\partial g}=0$
+
+$\because \bar{c}_{1}+\bar{c}_{2}=y$
+
+$\therefore \dfrac{\partial \bar{c}_{1}}{\partial g}=-\dfrac{\partial \bar{c}_{2}}{\partial g}$
+
+Hence,
+
+$U_{1}=U_{2}$
+
+$\dfrac{\beta}{1+g}=1$
+
+$\iff$
+
+$\beta=1+g$
+
+$\iff$
+
+$\boxed{g=\beta-1}$
+
+\subsubsection*{d.}
+
+To maximize consumers' utility, the best policy to do is deflation (according to this model).
+
+In solving this problem, we solve the hidden system of equations as well, where all consumers are involved. Since we use representative consumers here, the government's goal is equivalent to maximizing the welfare of the whole society. 
+
+If there is inflation, consumers' cash will depreciate, their wage will depreciate, and their money used for consuming goods will depreciate. All these factors decrease consumers' utility, discourage them from work. On the other hand, CIA will loosen if there is deflation, and increase consumers' utility and labor.
+
+\subsection*{3. Deriving the Phillips Curve and Price Indexation}
+
+\subsubsection*{a.}
+
+The decision retail firms make is to maximize its profit, by adjusting $y_{it}$: the revenue from selling in the perfect competitive market, minus the cost: buying from the monopolistically competitive market.
+
+\begin{equation*}
+    \begin{aligned}
+    & \max_{y_{jt}}P_{t}y_{t}-\int_{0}^{1} p_{it}y_{it} \,di 
+    \end{aligned}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \begin{aligned}
+    & \max_{y_{jt}}P_{t}\left[\int_{0}^{1} y^{\frac{1}{\varepsilon}}_{it} \,di \right]^{\varepsilon}-\int_{0}^{1} p_{it}y_{it} \,di 
+    \end{aligned}
+\end{equation*}
+
+The FOC is:
+
+$\displaystyle P_{t}\varepsilon\left[\int_{0}^{1} y^{\frac{1}{\varepsilon}}_{it} \,di \right]^{\varepsilon-1}\frac{1}{\varepsilon}y^{\frac{1}{\varepsilon}-1}_{jt}-p_{jt}=0$
+
+$\iff$
+
+$P_{t}\left[\int_{0}^{1} y^{\frac{1}{\varepsilon}}_{it} \,di \right]^{\varepsilon-1}y^{\frac{1}{\varepsilon}-1}_{jt}-p_{jt}=0$
+
+$\because y_{t}=\left[\int_{0}^{1} y^{\frac{1}{\varepsilon}}_{it} \,di \right]^{\varepsilon}$
+
+$\therefore \left[\int_{0}^{1} y^{\frac{1}{\varepsilon}}_{it} \,di \right]^{\varepsilon-1}=y^{\frac{\varepsilon-1}{\varepsilon}}_{t}$
+
+$P_{t}y^{\frac{\varepsilon-1}{\varepsilon}}_{t}y^{\frac{1}{\varepsilon}-1}_{jt}-p_{jt}=0$
+
+$P_{t}y^{\frac{\varepsilon-1}{\varepsilon}}_{t}y^{\frac{1-\varepsilon}{\varepsilon}}_{jt}=p_{jt}$
+
+$P_{t}y^{\frac{\varepsilon-1}{\varepsilon}}_{t}y^{-\frac{\varepsilon-1}{\varepsilon}}_{jt}=p_{jt}$
+
+$y^{\frac{\varepsilon-1}{\varepsilon}}_{jt}p_{jt}=P_{t}y^{\frac{\varepsilon-1}{\varepsilon}}_{t}$
+
+$y^{\frac{\varepsilon-1}{\varepsilon}}_{jt}=\left(\dfrac{P_{t}}{p_{jt}}\right)y^{\frac{\varepsilon-1}{\varepsilon}}_{t}$
+
+$y_{jt}=\left(\dfrac{P_{t}}{p_{jt}}\right)^{\frac{\varepsilon}{\varepsilon-1}}y_{t}$
+
+$y_{jt}=\left(\dfrac{p_{jt}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}$
+
+\subsubsection*{b.}
+
+Different notation in prices: Because we assume that the retail firms buy the input in the monopolistically competitive market but sell in the perfect competitive market. 
+
+$\varepsilon>1$, so that $p_{j,t}$ and $y_{j,t}$ are negatively correlated.
+
+\subsubsection*{c.}
+
+Denote the period $t$ menu cost as $C\left(p_{j,t},p_{j,t-1}\right)$.
+
+\begin{equation*}
+    p_{j,t}y_{j,t}-P_{t}avc\left(y_{j,t}\right)y_{j,t}-C\left(p_{j,t},p_{j,t-1}\right)P_{t}
+\end{equation*}
+
+$mc=avc\left(y\right)$ when fixed cost is 0.
+
+\subsubsection*{d.}
+
+The wholesale firm maximizes profit function:
+\begin{multline*}
+    p_{j,t}y_{j,t}-P_{t}mc_{j,t}y_{j,t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[p_{j,t+1}y_{j,t+1}-P_{t+1}mc_{j,t+1}y_{j,t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+
+The firm chooses $p_{j,t}$. Since the wholesale firm has market power, the frim takes the relationship between quantity and price into account. 
+
+Equivalently,
+\begin{multline*}
+    p_{j,t}\left(\dfrac{p_{j,t}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}-P_{t}mc_{j,t}\left(\dfrac{p_{j,t}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[p_{j,t+1}\left(\dfrac{p_{j,t+1}}{P_{t+1}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t+1}-P_{t+1}mc_{j,t+1}\left(\dfrac{p_{j,t+1}}{P_{t+1}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \dfrac{p_{j,t}^{\frac{\varepsilon}{1-\varepsilon}+1}}{P_{t}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t}-P_{t}mc_{j,t}\left(\dfrac{p_{j,t}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[\dfrac{p_{j,t+1}^{\frac{\varepsilon}{1-\varepsilon}+1}}{P_{t+1}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t+1}-P_{t+1}mc_{j,t+1}\left(\dfrac{p_{j,t+1}}{P_{t+1}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \dfrac{p_{j,t}^{\frac{\varepsilon+1-\varepsilon}{1-\varepsilon}}}{P_{t}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t}-P_{t}mc_{j,t}\left(\dfrac{p_{j,t}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[\dfrac{p_{j,t+1}^{\frac{\varepsilon+1-\varepsilon}{1-\varepsilon}}}{P_{t+1}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t+1}-P_{t+1}mc_{j,t+1}\left(\dfrac{p_{j,t+1}}{P_{t+1}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \dfrac{p_{j,t}^{\frac{1}{1-\varepsilon}}}{P_{t}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t}-P_{t}mc_{j,t}\left(\dfrac{p_{j,t}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[\dfrac{p_{j,t+1}^{\frac{1}{1-\varepsilon}}}{P_{t+1}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t+1}-P_{t+1}mc_{j,t+1}\left(\dfrac{p_{j,t+1}}{P_{t+1}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+
+\subsubsection*{e.}
+
+FOC w.r.t. $p_{j,t}$:
+\begin{multline*}
+    \frac{1}{1-\varepsilon}p_{j,t}^{\frac{1}{1-\varepsilon}-1}\dfrac{y_{t}}{P_{t}^{\frac{\varepsilon}{1-\varepsilon}}}-P_{t}mc_{j,t}\left(\dfrac{1}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}\cdot\frac{\varepsilon}{1-\varepsilon}p_{j,t}^{\frac{\varepsilon}{1-\varepsilon}-1}-\dfrac{\psi}{2}\cdot2\cdot\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)\cdot\dfrac{1}{p_{j,t-1}}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[-\dfrac{\psi}{2}\cdot2\cdot\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)\cdot p_{j,t+1}\left(-\dfrac{1}{p^{2}_{j,t}}\right)P_{t+1}\right]=0
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \frac{1}{1-\varepsilon}p_{j,t}^{\frac{1-\left(1-\varepsilon\right)}{1-\varepsilon}}y_{t}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}-\frac{\varepsilon}{1-\varepsilon}P_{t}mc_{j,t}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}y_{t}\cdot p_{j,t}^{\frac{\varepsilon-\left(1-\varepsilon\right)}{1-\varepsilon}}-\psi\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)\cdot\dfrac{P_{t}}{p_{j,t-1}}\\
+    +\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)\cdot\dfrac{p_{j,t+1}}{p_{j,t}}\cdot\dfrac{P_{t+1}}{p_{j,t}}\right]=0
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \frac{1}{1-\varepsilon}p_{j,t}^{\frac{1-1+\varepsilon}{1-\varepsilon}}y_{t}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}-\frac{\varepsilon}{1-\varepsilon}P_{t}^{1+\frac{\varepsilon}{\varepsilon-1}}p_{j,t}^{\frac{\varepsilon-1+\varepsilon}{1-\varepsilon}}mc_{j,t}y_{t}-\psi\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)\dfrac{P_{t}}{p_{j,t-1}}\\
+    +\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)\cdot\dfrac{p_{j,t+1}}{p_{j,t}}\cdot\dfrac{P_{t+1}}{p_{j,t}}\right]=0
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \frac{1}{1-\varepsilon}p_{j,t}^{\frac{\varepsilon}{1-\varepsilon}}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}y_{t}-\frac{\varepsilon}{1-\varepsilon}P_{t}^{\frac{2\varepsilon-1}{\varepsilon-1}}p_{j,t}^{\frac{2\varepsilon-1}{1-\varepsilon}}mc_{j,t}y_{t}-\psi\left(\dfrac{p_{j,t}}{p_{j,t-1}}-1\right)\dfrac{P_{t}}{p_{j,t-1}}\\
+    +\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{p_{j,t+1}}{p_{j,t}}-1\right)\dfrac{p_{j,t+1}}{p_{j,t}}\dfrac{P_{t+1}}{p_{j,t}}\right]=0
+\end{multline*}
+
+Since price and quantity are correlated, increasing $p_{j, t}$ increases the first term which shows marginal revenue, but the second term, which is limited to variable cost in each period, increases as well. As $p_{j,t}$ goes up, the effect on menu cost decreases, and the last term related to intertemporal effect goes down. 
+
+\subsubsection*{f.}
+
+By assumption, the FOC becomes:
+\begin{multline*}
+    \frac{1}{1-\varepsilon}P_{t}^{\frac{\varepsilon}{1-\varepsilon}}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}y_{t}-\frac{\varepsilon}{1-\varepsilon}P_{t}^{\frac{2\varepsilon-1}{\varepsilon-1}}P_{t}^{\frac{2\varepsilon-1}{1-\varepsilon}}mc_{t}y_{t}-\psi\left(\dfrac{P_{t}}{P_{t-1}}-1\right)\dfrac{P_{t}}{P_{t-1}}\\
+    +\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{P_{t+1}}{P_{t}}-1\right)\dfrac{P_{t+1}}{P_{t}}\dfrac{P_{t+1}}{P_{t}}\right]=0
+\end{multline*}
+$\iff$
+\begin{equation*}
+    \frac{1}{1-\varepsilon}y_{t}-\frac{\varepsilon}{1-\varepsilon}mc_{t}y_{t}-\psi\left(\dfrac{P_{t}}{P_{t-1}}-1\right)\dfrac{P_{t}}{P_{t-1}}+\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{P_{t+1}}{P_{t}}-1\right)\left(\dfrac{P_{t+1}}{P_{t}}\right)^{2}\right]=0
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \frac{y_{t}}{1-\varepsilon}\left(1-\varepsilon mc_{t}\right)-\psi\left(\left(1+\pi_{t}\right)-1\right)\left(1+\pi_{t}\right)+\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\left(1+\pi_{t+1}\right)-1\right)\left(1+\pi_{t+1}\right)^{2}\right]=0
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \frac{y_{t}}{1-\varepsilon}\left(1-\varepsilon mc_{t}\right)-\psi\pi_{t}\left(1+\pi_{t}\right)+\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\pi_{t+1}\left(1+\pi_{t+1}\right)^{2}\right]=0
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \psi\pi_{t}\left(1+\pi_{t}\right)=\frac{y_{t}}{1-\varepsilon}\left(1-\varepsilon mc_{t}\right)+\beta\psi\pi_{t+1}\left(1+\pi_{t+1}\right)
+\end{equation*}
+
+\subsubsection*{g.}
+
+NKPC links intertemporal inflation and marginal cost. 
+
+Marginal cost and inflation are positively related. Higher price to pay in the future, higher cost is expected, the lower mark-up is. Since $mc$ is labor intensive, higher $mc$ leads to lower unemployment.
+
+Current inflation is related to future inflation (or expectation about inflation), that comes into frms' mind when they adjust their mark-up. It is because prices at different periods are correlated.
+
+\subsubsection*{h.}
+
+\paragraph*{(a)}\mbox{}\\
+
+The wholesale firm maximizes profit function:
+\begin{multline*}
+    p_{j,t}y_{j,t}-P_{t}mc_{j,t}y_{j,t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}\left(1+\pi\right)^{\nu}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[p_{j,t+1}y_{j,t+1}-P_{t+1}mc_{j,t+1}y_{j,t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}\left(1+\pi\right)^{\nu}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+
+Equivalently,
+\begin{multline*}
+    \dfrac{p_{j,t}^{\frac{1}{1-\varepsilon}}}{P_{t}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t}-P_{t}mc_{j,t}\left(\dfrac{p_{j,t}}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t}}{p_{j,t-1}\left(1+\pi\right)^{\nu}}-1\right)^{2}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[\dfrac{p_{j,t+1}^{\frac{1}{1-\varepsilon}}}{P_{t+1}^{\frac{\varepsilon}{1-\varepsilon}}}y_{t+1}-P_{t+1}mc_{j,t+1}\left(\dfrac{p_{j,t+1}}{P_{t+1}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t+1}-\dfrac{\psi}{2}\left(\dfrac{p_{j,t+1}}{p_{j,t}\left(1+\pi\right)^{\nu}}-1\right)^{2}P_{t+1}\right]
+\end{multline*}
+
+\paragraph*{(b)}\mbox{}\\
+
+The firm maximizes $p_{j,t}$. Since the wholesale firm has market power, the frim takes the relationship between quantity and price into account. 
+
+FOC w.r.t. $p_{j,t}$:
+\begin{multline*}
+    \frac{1}{1-\varepsilon}p_{j,t}^{\frac{1}{1-\varepsilon}-1}\dfrac{y_{t}}{P_{t}^{\frac{\varepsilon}{1-\varepsilon}}}-P_{t}mc_{j,t}\left(\dfrac{1}{P_{t}}\right)^{\frac{\varepsilon}{1-\varepsilon}}y_{t}\cdot\frac{\varepsilon}{1-\varepsilon}p_{j,t}^{\frac{\varepsilon}{1-\varepsilon}-1}\\
+    -\dfrac{\psi}{2}\cdot2\cdot\left(\dfrac{p_{j,t}}{p_{j,t-1}\left(1+\pi\right)^{\nu}}-1\right)\cdot\dfrac{1}{p_{j,t-1}\left(1+\pi\right)^{\nu}}P_{t}\\
+    +\dfrac{\beta}{1+\pi_{t+1}}\left[-\dfrac{\psi}{2}\cdot2\cdot\left(\dfrac{p_{j,t+1}}{p_{j,t}\left(1+\pi\right)^{\nu}}-1\right)\cdot\dfrac{p_{j,t+1}}{\left(1+\pi\right)^{\nu}}\left(-\dfrac{1}{p^{2}_{j,t}}\right)P_{t+1}\right]=0
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \frac{1}{1-\varepsilon}p_{j,t}^{\frac{\varepsilon}{1-\varepsilon}}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}y_{t}-\frac{\varepsilon}{1-\varepsilon}P_{t}^{\frac{2\varepsilon-1}{\varepsilon-1}}p_{j,t}^{\frac{2\varepsilon-1}{1-\varepsilon}}mc_{j,t}y_{t}-\psi\left(\dfrac{p_{j,t}}{p_{j,t-1}\left(1+\pi\right)^{\nu}}-1\right)\dfrac{P_{t}}{p_{j,t-1}\left(1+\pi\right)^{\nu}}\\
+    +\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{p_{j,t+1}}{p_{j,t}\left(1+\pi\right)^{\nu}}-1\right)\dfrac{p_{j,t+1}}{p_{j,t}}\dfrac{P_{t+1}}{p_{j,t}}\dfrac{1}{\left(1+\pi\right)^{\nu}}\right]=0
+\end{multline*}
+
+\paragraph*{(c)}\mbox{}\\
+
+By assumption, the FOC above becomes:
+\begin{multline*}
+    \frac{1}{1-\varepsilon}P_{t}^{\frac{\varepsilon}{1-\varepsilon}}P_{t}^{\frac{\varepsilon}{\varepsilon-1}}y_{t}-\frac{\varepsilon}{1-\varepsilon}P_{t}^{\frac{2\varepsilon-1}{\varepsilon-1}}P_{t}^{\frac{2\varepsilon-1}{1-\varepsilon}}mc_{t}y_{t}-\psi\left(\dfrac{P_{t}}{P_{t-1}\left(1+\pi\right)^{\nu}}-1\right)\dfrac{P_{t}}{P_{t-1}\left(1+\pi\right)^{\nu}}\\
+    +\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{P_{t+1}}{P_{t}\left(1+\pi\right)^{\nu}}-1\right)\dfrac{P_{t+1}}{P_{t}}\dfrac{P_{t+1}}{P_{t}}\dfrac{1}{\left(1+\pi\right)^{\nu}}\right]=0
+\end{multline*}
+$\iff$
+\begin{multline*}
+    \frac{y_{t}}{1-\varepsilon}\left(1-\varepsilon mc_{t}\right)-\psi\left(\dfrac{1+\pi_{t}}{\left(1+\pi\right)^{\nu}}-1\right)\dfrac{1+\pi_{t}}{\left(1+\pi\right)^{\nu}}+\dfrac{\beta\psi}{1+\pi_{t+1}}\left[\left(\dfrac{1+\pi_{t+1}}{\left(1+\pi\right)^{\nu}}-1\right)\dfrac{\left(1+\pi_{t+1}\right)^{2}}{\left(1+\pi\right)^{\nu}}\right]=0
+\end{multline*}
+$\iff$
+\begin{equation*}
+    \psi\left(\dfrac{1+\pi_{t}}{\left(1+\pi\right)^{\nu}}-1\right)\dfrac{1+\pi_{t}}{\left(1+\pi\right)^{\nu}}=\frac{y_{t}}{1-\varepsilon}\left(1-\varepsilon mc_{t}\right)+\beta\psi\left[\left(\dfrac{1+\pi_{t+1}}{\left(1+\pi\right)^{\nu}}-1\right)\dfrac{1+\pi_{t+1}}{\left(1+\pi\right)^{\nu}}\right]
+\end{equation*}
+
+Inflation is not only convoluted across periods, but also affiliate with steady state inflation level. Similar to traditional NKPC, hihger current prices increase the nominal marginal cost and expectation about future inflation. However, it is more sticky to the steady state price level. 
+
+\paragraph*{(d)}\mbox{}\\
+
+In steady state, $\pi_{t}=\pi$, $y_{t}=y$, $mc_{t}=mc$
+
+Substute we get:
+\begin{equation*}
+    \psi\left(\dfrac{1+\pi}{\left(1+\pi\right)^{\nu}}-1\right)\dfrac{1+\pi}{\left(1+\pi\right)^{\nu}}=\frac{y}{1-\varepsilon}\left(1-\varepsilon mc\right)+\beta\psi\left[\left(\dfrac{1+\pi}{\left(1+\pi\right)^{\nu}}-1\right)\dfrac{\left(1+\pi\right)}{\left(1+\pi\right)^{\nu}}\right]
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \psi\left(\left(1+\pi\right)^{1-\nu}-1\right)\left(1+\pi\right)^{1-\nu}=\frac{y}{1-\varepsilon}\left(1-\varepsilon mc\right)+\beta\psi\left[\left(\left(1+\pi\right)^{1-\nu}-1\right)\left(1+\pi\right)^{1-\nu}\right]
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \left(1-\beta\right)\psi\left(\left(1+\pi\right)^{1-\nu}-1\right)\left(1+\pi\right)^{1-\nu}=\frac{y}{1-\varepsilon}\left(1-\varepsilon mc\right)
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \left(1-\beta\right)\psi\left(\left(1+\pi\right)^{1-\nu}-1\right)\left(1+\pi\right)^{1-\nu}\dfrac{1-\varepsilon}{y}=1-\varepsilon mc
+\end{equation*}
+$\iff$
+\begin{equation*}
+    \varepsilon mc=1-\left(1-\beta\right)\psi\left(\left(1+\pi\right)^{1-\nu}-1\right)\left(1+\pi\right)^{1-\nu}\dfrac{1-\varepsilon}{y}
+\end{equation*}
+$\iff$
+\begin{equation*}
+    mc=\dfrac{1}{\varepsilon}\left(1-\left(1-\beta\right)\psi\left(\left(1+\pi\right)^{1-\nu}-1\right)\left(1+\pi\right)^{1-\nu}\dfrac{1-\varepsilon}{y}\right)
+\end{equation*}
+
+
+\paragraph*{(e)}\mbox{}\\
+
+If $\nu=0$, the steady state term in the adjustment cost expression degenerates. Therefore, the PC, in this case, is the same as the original NKPC. Obviously, the expression above is the same with the Rotemberg case where steady price level doesn't come into effect.
+
+\section*{\textbf{Appendix}} 
+
+\subsection*{1} 
+
+\subsubsection*{d.} 
+
+In real term:
+
+$\dfrac{M^{1}_{t}}{P_{t}}=m^{1}_{t}$
+
+$\dfrac{M^{2}_{t}}{P_{t}}=m^{2}_{t}$
+
+$p^{b}_{t}=\dfrac{P^{b}_{t}}{P_{t}}$
+
+$s_{t}=\dfrac{S_{t}}{P_{t}}$
+
+$d_{t}=\dfrac{D_{t}}{P_{t}}$
+
+$y_{t}=\dfrac{Y_{t}}{P_{t}}$
+
+$P_{t}c_{t}+M^{1}_{t}+M^{2}_{t}+P^{b}_{t}B_{t}+S_{t}a_{t}-Y_{t}-M^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)M^{2}_{t-1}-B_{t-1}-\left(S_{t}+D_{t}\right)a_{t-1}=0$
+
+$\iff$
+\begin{multline*}
+    P_{t}\left(c_{t}+m^{1}_{t}+m^{2}_{t}+p^{b}_{t}B_{t}+s_{t}a_{t}-y_{t}\right)\\
+    -P_{t-1}\left(m^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)m^{2}_{t-1}\right)-\left(1+i_{t-1}\right)P^{b}_{t-1}B_{t-1}-P_{t}\left(s_{t}+d_{t}\right)a_{t-1}=0
+\end{multline*}
+
+$\iff$
+\begin{multline*}
+    P_{t}\left(c_{t}+m^{1}_{t}+m^{2}_{t}+p^{b}_{t}B_{t}+s_{t}a_{t}-y_{t}-\left(s_{t}+d_{t}\right)a_{t-1}\right)\\
+    -P_{t-1}\left(m^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)m^{2}_{t-1}\right)-\left(1+i_{t-1}\right)P_{t-1}p^{b}_{t-1}B_{t-1}=0
+\end{multline*}
+
+$\iff$
+\begin{multline*}
+    \dfrac{P_{t}}{P_{t-1}}\left(c_{t}+m^{1}_{t}+m^{2}_{t}+p^{b}_{t}B_{t}+s_{t}a_{t}-y_{t}-\left(s_{t}+d_{t}\right)a_{t-1}\right)\\
+    -\left(m^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)m^{2}_{t-1}-\left(1+i_{t-1}\right)p^{b}_{t-1}B_{t-1}\right)=0
+\end{multline*}
+
+$\iff$
+\begin{multline*}
+    \left(1+\pi_{t}\right)\left(c_{t}+m^{1}_{t}+m^{2}_{t}+p^{b}_{t}B_{t}+s_{t}a_{t}-y_{t}-\left(s_{t}+d_{t}\right)a_{t-1}\right)\\
+    -\left(m^{1}_{t-1}-\left(1+i^{M}_{t-1}\right)m^{2}_{t-1}-\left(1+i_{t-1}\right)p^{b}_{t-1}B_{t-1}\right)=0
+\end{multline*}
+
+$\iff$
+\begin{multline} \label{eq:1.15}
+    \left(c_{t}+m^{1}_{t}+m^{2}_{t}+p^{b}_{t}B_{t}+s_{t}a_{t}-y_{t}-\left(s_{t}+d_{t}\right)a_{t-1}\right) \notag\\
+    -\left(\dfrac{m^{1}_{t-1}}{1+\pi_{t}}-\left(1+r^{M}_{t-1}\right)m^{2}_{t-1}-\left(1+r_{t-1}\right)p^{b}_{t-1}B_{t-1}\right)=0 \tag{1.15}
+\end{multline}
+
+$\quad\dfrac{c_{t+1}}{c_{t}}=\dfrac{\beta\left(1+i_{t}\right)}{1+\pi_{t+1}}=\beta\left(1+r_{t}\right)$
+
+$\iff$
+\begin{flalign} \label{eq:1.16}
+    \quad\dfrac{c_{t+1}}{c_{t}}&=\beta\left(1+r_{t}\right)& \tag{1.16}
+\end{flalign}
+
+$\quad\dfrac{\left(1+\pi_{t+1}\right)m^{1}_{t+1}}{m^{1}_{t}}=\dfrac{\beta\left(1+i_{t+1}\right)i_{t}}{i_{t+1}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.17}
+    \quad\dfrac{m^{1}_{t+1}}{m^{1}_{t}}&=\dfrac{\beta\left(1+r_{t+1}\right)\left(\left(1+\pi_{t+1}\right)\left(1+r_{t}\right)-1\right)}{\left(1+\pi_{t+2}\right)\left(1+r_{t+1}\right)-1}& \tag{1.17}
+\end{flalign}
+
+$\quad\dfrac{\left(1+\pi_{t+1}\right)m^{2}_{t+1}}{m^{2}_{t}}=\dfrac{\beta\left(1+i_{t+1}\right)\left(1+i_{t}-1-i^{M}_{t}\right)}{1+i_{t+1}-1-i^{M}_{t+1}}$
+
+$\iff$
+
+$\quad\dfrac{m^{2}_{t+1}}{m^{2}_{t}}=\dfrac{\beta\left(1+r_{t+1}\right)\left(\left(1+\pi_{t+1}\right)\left(1+r_{t}\right)-\left(1+\pi_{t+1}\right)\left(1+r^{M}_{t}\right)\right)}{\left(1+\pi_{t+2}\right)\left(1+r_{t+1}\right)-\left(1+\pi_{t+2}\right)\left(1+r^{M}_{t+1}\right)}=\dfrac{\beta\left(1+r_{t+1}\right)\left(1+\pi_{t+1}\right)\left(r_{t}-r^{M}_{t}\right)}{\left(1+\pi_{t+2}\right)\left(r_{t+1}-r^{M}_{t+1}\right)}$
+
+$\iff$
+\begin{flalign} \label{eq:1.18}
+    \quad\dfrac{m^{2}_{t+1}}{m^{2}_{t}}&=\dfrac{\beta\left(1+r_{t+1}\right)\left(1+\pi_{t+1}\right)\left(r_{t}-r^{M}_{t}\right)}{\left(1+\pi_{t+2}\right)\left(r_{t+1}-r^{M}_{t+1}\right)}& \tag{1.18}
+\end{flalign}
+
+$\quad m^{1}_{t}=\dfrac{\left(1+i_{t}\right)c_{t}}{i_{t}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.19}
+    \quad m^{1}_{t}&=\dfrac{\left(1+\pi_{t+1}\right)\left(1+r_{t}\right)c_{t}}{\left(1+\pi_{t+1}\right)\left(1+r_{t}\right)-1}& \tag{1.19}
+\end{flalign}
+
+$\quad m^{2}_{t}=\dfrac{\chi_{t} \left(1+i_{t}\right)c_{t}}{i_{t}-i^{M}_{t}}$
+
+$\iff$
+\begin{flalign} \label{eq:1.20}
+    \quad m^{2}_{t}&=\dfrac{\chi_{t}\left(1+\pi_{t+1}\right)\left(1+r_{t}\right)c_{t}}{\left(1+\pi_{t}\right)\left(r_{t}-r^{M}_{t}\right)}& \tag{1.20}
+\end{flalign}
+
+By \eqref{eq:1.7}:
+
+$\quad1+i_{t}=\left(1+\pi_{t1}\right)\dfrac{s_{t+1}+d_{t+1}}{s_{t}}$
+
+\begin{flalign} \label{eq:1.21}
+    \quad1+r_{t}&=\dfrac{s_{t+1}+d_{t+1}}{s_{t}}& \tag{1.21}
+\end{flalign}
+
+\eqref{eq:1.9}, \eqref{eq:1.15} to \eqref{eq:1.21} solves $c, m_{1}, m_{2}, \chi, r, r^{M}, a_{t}, B_{t}$.
+
+Consider the steady state:
+
+\begin{flalign} \label{eq:1.22}
+    \quad\left(c+m^{1}+m^{2}+p^{b}B+sa-y-\left(s+d\right)a\right)-\left(\dfrac{m^{1}}{1+\pi}-\left(1+r^{M}\right)m^{2}-\left(1+r\right)p^{b}B\right)&=0& \tag{1.22}
+\end{flalign}
+
+By \eqref{eq:1.16}:
+
+$\quad\beta\left(1+r\right)=\dfrac{c}{c}=1$
+
+\begin{flalign} \label{eq:1.23}
+    \quad r&=\dfrac{1}{\beta}-1& \tag{1.23}
+\end{flalign}
+
+By \eqref{eq:1.17}:
+
+$\quad \dfrac{\beta\left(1+r\right)\left(\left(1+\pi\right)\left(1+r\right)-1\right)}{\left(1+\pi\right)\left(1+r\right)-1}=\dfrac{m^{1}}{m^{1}}=1$
+
+The same as above.
+
+\eqref{eq:1.18} is similar.
+
+By \eqref{eq:1.19}:
+\begin{flalign} \label{eq:1.24}
+    \quad m^{1}&=\dfrac{\left(1+\pi\right)\left(1+r\right)c}{\left(1+\pi\right)\left(1+r\right)-1}& \tag{1.24}
+\end{flalign}
+
+By \eqref{eq:1.20}:
+\begin{flalign} \label{eq:1.25}
+    \quad m^{2}&=\dfrac{\chi\left(1+\pi\right)\left(1+r\right)c}{\left(1+\pi\right)\left(r-r^{M}\right)}& \tag{1.25}
+\end{flalign}
+
+By \eqref{eq:1.21}:
+\begin{flalign} \label{eq:1.26}
+    \quad1+r&=\dfrac{s+d}{s}& \tag{1.26}
+\end{flalign}
+
+But using the $MRS_{23}$ we have:
+
+$\quad\dfrac{\chi_{t} M^{1}_{t}}{M^{2}_{t}}=1-\dfrac{i^{M}_{t}}{i_{t}}=1-\dfrac{\left(1+\pi_{t+1}\right)\left(1+r^{M}_{t}\right)}{\left(1+\pi_{t+1}\right)\left(1+r_{t}\right)}=1-\dfrac{1+r^{M}_{t}}{1+r_{t}}=\dfrac{\left(1+r_{t}\right)-\left(1+r^{M}_{t}\right)}{1+r_{t}}=\dfrac{r_{t}-r^{M}_{t}}{1+r_{t}}$
+
+In steady state:
+
+\begin{flalign} \label{eq:1.27}
+    \quad\dfrac{\chi m^{1}}{m^{2}}&=\dfrac{r-r^{M}}{1+r}& \tag{1.27}
+\end{flalign}
+
+\subsection*{2}
+
+\subsubsection*{b}
+
+Case 2: $P_{t}c_{1,t}-M_{t-1}-\tau_{t}<0$
+
+By \eqref{eq:2.6}, \eqref{eq:2.7} \& \eqref{eq:2.8}, the equations used to define, the original budget constraint becomes:
+
+$P_{t}c_{1,t}+P_{t}c_{2,t}=P_{t}y_{t}$
+
+$\iff$
+
+$c_{1,t}+c_{2,t}=y_{t}$
+
+$c_{2,t}=y_{t}-c_{1,t}$
+
+The problem becomes:
+
+\begin{equation*}
+    \begin{aligned}
+    & \max\sum_{s=0}^{\infty}\beta^{s}U\left(c_{1,t},y_{t}-c_{1,t}\right) \\
+     \textrm{subject to}\\
+    & P_{t}c_{1,t}-M_{t}<0.
+    \end{aligned}
+\end{equation*}
+
+
+\begin{flalign*}
+    \dfrac{\partial U\left(c_{1,t},y_{t}-c_{1,t}\right)}{\partial c_{1,t}}&=U_{1}\left(c_{1,t},y_{t}-c_{1,t}\right)+U_{2}\left(c_{1,t},y_{t}-c_{1,t}\right)\left(-1\right)&\\
+    &=U_{1}\left(c_{1,t},y_{t}-c_{1,t}\right)-U_{2}\left(c_{1,t},y_{t}-c_{1,t}\right)
+\end{flalign*}
+
+But
+
+$U_{1}\left(c_{1,t},y_{t}-c_{1,t}\right)=U_{2}\left(c_{1,t},y_{t}-c_{1,t}\right)$ when $\mu_{t}=0$, as shown above, 
+
+$\therefore \dfrac{\partial U\left(c_{1,t},y_{t}-c_{1,t}\right)}{\partial c_{1,t}}=0$
+
+Consumers are indifferent with any pair $c_{1,t}$ and $c_{2,t}$, or they are not maximizing. 
+
+Denote the best pair in Case 1 as $\left(c^{*}_{1,t}, c^{*}_{2,t}\right)$.
+
+We know $c^{*}_{1,t}+c^{*}_{2,t}=c_{1,t}+c_{2,t}=y_{t}$ and $c^{*}_{1,t}>c_{1,t}$
+
+$U\left(c^{*}_{1,t}, y_{t}-c^{*}_{1,t}\right)$ is the utility in Case 1.
+
+$U\left(c_{1,t}, y_{t}-c_{1,t}\right)$ has the same indifference level as other pairs in Case 2.
+
+In Case 1:
+\begin{flalign*}
+    \dfrac{\partial U\left(c_{1,t},y_{t}-c_{1,t}\right)}{\partial c_{1,t}}&=U_{1}\left(c_{1,t},y_{t}-c_{1,t}\right)+U_{2}\left(c_{1,t},y_{t}-c_{1,t}\right)\left(-1\right)&\\
+    &=U_{1}\left(c_{1,t},y_{t}-c_{1,t}\right)-U_{2}\left(c_{1,t},y_{t}-c_{1,t}\right)&\\
+    &=\mu_{t}&\\
+    &>0
+\end{flalign*}
+
+$\therefore U\left(c^{*}_{1,t}, y_{t}-c^{*}_{1,t}\right)>U\left(c_{1,t}, y_{t}-c_{1,t}\right)$
+
+Case 1 brings higher utility for consumers.
+
+In conclusion, 
+
+$\boxed{\dfrac{U_{2}\left(\bar{c}_{1},\bar{c}_{2}\right)}{U_{1}\left(\bar{c}_{1},\bar{c}_{2}\right)}=\dfrac{\beta}{1+g}}$
+
+\subsection*{3} 
+
+\textrm{d.} If $\nu=1$, the FOC in \textrm{h.(d)} degenerates to $mc=\dfrac{1}{\varepsilon}$, the Dixit-Stiglitz marginal cost expression in steady state and symmetric case. As long as the steady state has reached, price is fully flexible (the price level is at the steady level) since numerator and denominator cancel, there is no adjustment cost.
+
+\end{document}

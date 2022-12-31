@@ -1,0 +1,648 @@
+\documentclass{article}
+
+\usepackage{titlesec}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+
+\usepackage{a4wide}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{parskip}
+
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+
+\DeclareMathOperator{\EX}{\mathbb{E}}
+
+\titleformat*{\subsubsection}{\normalfont}
+
+\author{Yu Xia \\ ID: yx5262}
+\title{\textbf{Yu Xia's HW2}}
+\date{September 2022}
+
+\begin{document}
+\maketitle
+
+\nocite{*}
+
+\section*{\textrm{Multiple Choice}}
+
+1-5:\\
+ccdda
+
+6-10:\\
+bbbcb
+
+11-15:\\
+adabd
+
+16-20:\\
+dbdbc
+
+\section*{\textrm{Long}}
+
+\subsection*{\textrm{1. Government and credit constraints}}
+
+\subsubsection*{\textrm{a.}}
+
+Government lifetime budget constraint:
+
+$g_{1}+\dfrac{g_{2}}{1+r}=t_{1}+\dfrac{t_{2}}{1+r}$
+
+Plug in those known conditions:
+
+$2+\dfrac{6.6}{1.1}=t_{1}+\dfrac{1.1}{1.1}\implies2+6=t_{1}+1\implies \boxed{t_{1}=8-1=7}$
+
+\subsubsection*{\textrm{b.}}
+
+Consumer lifetime budget constraint:
+
+$c_{1}+\dfrac{c_{2}}{1+r}=y_{1}-t_{1}+\dfrac{y_{2}-t_{2}}{1+r}$
+
+Plug in those known conditions:
+
+$c_{1}+\dfrac{c_{2}}{1.1}=9-7+\dfrac{23.1-1.1}{1.1}\implies c_{1}+\dfrac{c_{2}}{1.1}=2+\dfrac{22}{1.1}\implies c_{1}+\dfrac{c_{2}}{1.1}=2+20=22$
+
+The optimization problem for the consumer:
+
+\begin{equation*}
+    \begin{aligned}
+    & \max_{c_{1},c_{2}}
+      u\left(c_{1},c_{2}\right) \\
+     \text{subject to}\\
+    &   c_{1}+\dfrac{c_{2}}{1.1}=22.
+    \end{aligned}\\
+    \Longrightarrow
+    \begin{aligned}
+    & \max_{c_{1},c_{2}}
+      \ln\left(c_{1}\right)+\ln\left(c_{2}\right) \\
+      \text{subject to}\\
+    &  c_{1}+\dfrac{c_{2}}{1.1}=22.
+    \end{aligned}
+\end{equation*}
+
+$MU_{1}=\dfrac{1}{c_{1}}$
+
+$MU_{2}=\dfrac{1}{c_{2}}$
+
+$\dfrac{MU_{1}}{MU_{2}}=\dfrac{\dfrac{1}{c_{1}}}{\dfrac{1}{c_{2}}}=\dfrac{c_{2}}{c_{1}}$
+
+On the other hand, 
+
+$\dfrac{MU_{1}}{MU_{2}}=1.1\implies \dfrac{c_{2}}{c_{1}}=1.1 \implies c_{2}=1.1c_{1}$
+
+$\because c_{1}+\dfrac{c_{2}}{1.1}=22$
+
+$\therefore c_{1}+c_{1}=22$
+
+\begin{spacing}{1}
+    \fbox{%
+    \parbox[c]{.12\textwidth}{\
+    $\begin{cases}
+        c_{1}=11\\
+        c_{2}=12.1
+    \end{cases}$}%
+    }
+\end{spacing}
+
+\subsubsection*{\textrm{c.}}
+
+$s^{priv}=y_{1}-t_{1}-c_{1}=9-7-11=\boxed{-9}$
+
+$s^{govt}=t_{1}-g_{1}=7-2=\boxed{5}$
+
+$s^{nat}=s^{priv}+s^{govt}=-9+5=\boxed{-4}$
+
+\subsubsection*{\textrm{d.}}
+
+Now $t'_{1}=t_{1}-2=7-2=5$
+
+Government lifetime budget constraint:
+
+$g_{1}+\dfrac{g_{2}}{1+r}=t'_{1}+\dfrac{t'_{2}}{1+r}$
+
+Plug in those known conditions:
+
+$2+\dfrac{6.6}{1.1}=5+\dfrac{t'_{2}}{1.1}\implies2+6=5+\dfrac{t'_{2}}{1.1}\implies\dfrac{t'_{2}}{1.1}=8-5=3\implies\boxed{t'_{2}=3.3}$
+
+Consumer lifetime budget constraint:
+
+$c_{1}+\dfrac{c_{2}}{1+r}=y_{1}-t'_{1}+\dfrac{y_{2}-t'_{2}}{1+r}$
+
+Plug in those known conditions:
+
+$c_{1}+\dfrac{c_{2}}{1.1}=9-5+\dfrac{23.1-3.3}{1.1}\implies c_{1}+\dfrac{c_{2}}{1.1}=4+\dfrac{19.8}{1.1}\implies c_{1}+\dfrac{c_{2}}{1.1}=4+18=22$
+
+The optimization problem for the consumer doesn't change.
+
+Again, we have:
+
+\begin{spacing}{1}
+    \fbox{%
+    \parbox[c]{.12\textwidth}{\
+    $\begin{cases}
+        c_{1}=11\\
+        c_{2}=12.1
+    \end{cases}$}%
+    }
+\end{spacing}
+
+$\boxed{s^{nat}=-4}$
+
+\subsubsection*{\textrm{e.}}
+
+Neither. Since the consumer doesn't change his/her choice of $c_{1}$ and $c_{2}$, consumer's utility doesn't change.
+
+\subsubsection*{\textrm{f.}}
+
+With the borrowing constraints, the consumer cannot borrow at period 1, so he/she chooses 
+$s^{priv}=0\implies y_{1}-t_{1}-c_{1}=0\implies9-7-c_{1}=0\implies \boxed{c_{1}=2}$
+
+Also,
+
+$s^{priv\prime}=0\implies y_{1}-t'_{1}-c'_{1}=0\implies9-5-c'_{1}=0\implies \boxed{c'_{1}=4}$
+
+$c'_{2}=y_{2}-t'_{2}=23.1-3.3=\boxed{19.8}$
+
+$s^{nat}=y_{1}-c_{1}-g_{1}=9-2-2=7-2=\boxed{5}$
+
+$s^{nat\prime}=y_{1}-c'_{1}-g_{1}=9-4-2=5-2=\boxed{3}$
+
+So national savings change.
+
+\subsection*{\textrm{2. Static problem, changes in Government Expenditures}}
+
+\subsubsection*{\textrm{a.}}
+
+The optimality problem:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    & \max_{c, l}
+      U\left(c,l\right) \\
+     \text{subject to}\\
+    &   c+t=wn+D,
+    &   n=1-l\in[0,1].
+    \end{aligned}
+\end{equation*}%
+}}
+
+The first constraint is budget constraint, the second one is the amount of time available.
+
+The first order conditions:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+        U_{c}\left(c,l\right)-\lambda=0\\
+        U_{l}\left(c,l\right)-w\lambda=0\\
+        c+t=w\left(1-t\right)+D
+    \end{aligned}
+\end{equation*}%
+}}
+
+Consumer's optimality condition:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    \dfrac{U_{l}\left(c,l\right)}{U_{c}\left(c,l\right)}=w
+    \end{aligned}
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{b.}}
+
+She chooses two goods: consumption (or in other words, saving) and leisure (or, on the other hand, hours worked).
+
+She knows the expression of utility function $U\left(c,l\right)$, real wage $w$, firms' real dividends $D$ and taxes $t$ are given.
+
+\subsubsection*{\textrm{c.}}
+
+Firm's optimality problem is to maximize profit:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+     \max_{n^{d}}
+      AF\left(k,n^{d}\right)-wn^{d}+k     
+    \end{aligned}
+\end{equation*}%
+}}
+
+The underlying constraint is that the firm cannot produce more than its production function defines.
+
+The first order condition express (also, the optimality problem) as:
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+    MP_{n}=w
+    \end{aligned}
+\end{equation*}
+$\implies$
+\begin{equation*}
+    \begin{aligned}
+    AF_{n}\left(k, n^{d}\right)=w
+    \end{aligned}
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{d.}}
+
+The firm is clear about its production function (including $TFP$ $A$), given real wage $w$, current capital $k$. The firm decides $n^{d}$.
+
+\subsubsection*{\textrm{e.}}
+
+7 endogenous variables: $l,c,w,D,t,n^{d}, n$. (If plug in the expression of $D$, it would be 6.) $g, A, k$ are exogenous.
+
+\subsubsection*{\textrm{f.}}
+
+7 unknowns ($l,c,w,D,t,n^{d}, n$), 7 equations.
+
+\begin{equation}
+    \dfrac{U_{l}\left(c,l\right)}{U_{c}\left(c,l\right)}=w
+\end{equation}
+
+\begin{equation}
+    c+t=wn+D
+\end{equation}
+
+\begin{equation}
+    n=1-l
+\end{equation}
+
+\begin{equation}
+    D=AF\left(k,n^{d}\right)-wn^{d}+k
+\end{equation}
+
+\begin{equation}
+    AF_{n}\left(k, n^{d}\right)=w
+\end{equation}
+
+Additionally, in the static model, the government has to satisfy its budget constraint.
+
+\begin{equation}
+    g=t
+\end{equation}
+
+In competitive equilibrium, the demand of labor should be equal to the supply.
+
+\begin{equation}
+    n^{d}=n
+\end{equation}
+
+Add or substituting variables may change the number of unknowns and equations (like substitute $D$ we could have $c+t=AF\left(k,n\right)+k$, then we have 6 equation and 6 unknowns), but the number of equations and unknowns should be the same.
+
+\subsubsection*{\textrm{g.}}
+
+Substitution $D$ in equation (2), with the condition $n^{d}=n$ and $t=g$ we have $c+g=AF\left(k,n\right)+k\implies c=AF\left(k,n\right)+k-g$
+
+Plug in FOCs, we have: \\
+
+\fbox{%
+\parbox[c]{\textwidth}{\
+\begin{equation*}
+    \begin{aligned}
+        U_{l}\left(AF\left(k,n\right)+k-g,1-n\right)-AF_{n}\left(k, n\right)U_{c}\left(AF\left(k,n\right)+k-g,1-n\right)=0     
+    \end{aligned}
+\end{equation*}%
+}}
+
+\subsubsection*{\textrm{h.}}
+
+\begin{flalign*}
+    \dfrac{\partial n}{\partial g}&=\dfrac{-\left(U_{lc}\times\left(-1\right)-AF_{n}U_{cc}\times\left(-1\right)\right)}{U_{lc}AF_{n}+U_{ll}\times\left(-1\right)-\Bigl(AF_{nn}U_{c}+AF_{n}\bigl(U_{cc}AF_{n}+U_{cl}\left(-1\right)\bigr)\Bigr)} &\\
+                                  &=\dfrac{-U_{lc}\times\left(-1\right)+AF_{n}U_{cc}\times\left(-1\right)}{U_{lc}AF_{n}-U_{ll}-AF_{nn}U_{c}-AF_{n}\left(U_{cc}AF_{n}-U_{cl}\right)}&\\
+                                  &=\dfrac{U_{lc}-AF_{n}U_{cc}}{U_{lc}AF_{n}-U_{ll}-AF_{nn}U_{c}-\left(\left(AF_{n}\right)^2U_{cc}-AF_{n}U_{cl}\right)}&\\
+                                  &=\dfrac{U_{lc}-AF_{n}U_{cc}}{U_{lc}AF_{n}-U_{ll}-AF_{nn}U_{c}-\left(AF_{n}\right)^2U_{cc}+AF_{n}U_{lc}}&\\
+                                  &=\dfrac{U_{lc}-AF_{n}U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}
+\end{flalign*}
+
+Since $w$ is an exogenous variable for consumer, the change in $g$ leads to a pure income effect for consumer. So $\dfrac{\partial l}{\partial g}<0$ $\boxed{\dfrac{\partial n}{\partial g}>0}$.
+
+Plug in $U_{lc}=0$, we have: \\
+
+$U_{lc}-AF_{n}U_{cc}=-AF_{n}U_{cc}$
+
+$2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}=-U_{ll}-AF_{nn}U_{c}-\left(AF_{n}\right)^2U_{cc}$
+
+$\dfrac{\partial n}{\partial g}=\dfrac{-AF_{n}U_{cc}}{-U_{ll}-AF_{nn}U_{c}-\left(AF_{n}\right)^2U_{cc}}=\dfrac{AF_{n}U_{cc}}{U_{ll}+AF_{nn}U_{c}+\left(AF_{n}\right)^2U_{cc}}$\\
+
+\subsubsection*{\textrm{i.}}
+
+Take the derivative of equation (5), w.r.t. $g$, we have:\\
+
+$\dfrac{\partial w}{\partial g}=AF_{nn}\left(k, n^{d}\right)\dfrac{\partial n^{d}}{\partial g}=\boxed{\dfrac{\left(U_{lc}-AF_{n}U_{cc}\right)\cdot AF_{nn}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}}$
+
+For simplicity, look at $AF_{nn}\dfrac{\partial n}{\partial g}$. $A>0$. Concavity indicates that $F_{nn}<0$. $\dfrac{\partial n}{\partial g}>0$. This results in $\boxed{\dfrac{\partial w}{\partial g}<0}$.
+
+We also have:
+
+$c+g=AF\left(k,n\right)+k\implies c=AF\left(k,n\right)+k-g$
+
+\begin{flalign*}
+    \dfrac{\partial c}{\partial g}&=AF_{n}\dfrac{\partial n}{\partial g}-1=\dfrac{AF_{n}U_{lc}-\left(AF_{n}\right)^2U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}-1 &\\
+                                  &=\dfrac{AF_{n}U_{lc}-\left(AF_{n}\right)^2U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}-\dfrac{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}&\\
+                                  &=\dfrac{AF_{n}U_{lc}-\left(AF_{n}\right)^2U_{cc}-2AF_{n}U_{lc}+U_{ll}+\left(AF_{n}\right)^2U_{cc}+AF_{nn}U_{c}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}&\\
+                                  &=\boxed{\dfrac{-AF_{n}U_{lc}+U_{ll}+AF_{nn}U_{c}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}}
+\end{flalign*}
+
+Since $c$, is a normal good as well, $\boxed{\dfrac{\partial c}{\partial g}<0}$, negative.
+
+$\because U_{cl}=0$
+
+$\therefore \dfrac{\partial w}{\partial g}=\dfrac{AF_{n}U_{cc}\cdot AF_{nn}}{U_{ll}+AF_{nn}U_{c}+\left(AF_{n}\right)^2U_{cc}} \dfrac{\partial c}{\partial g}=\dfrac{U_{ll}+AF_{nn}U_{c}}{-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}$
+
+In \textbf{Appendix}, other ways to calculate $\dfrac{\partial w}{\partial g}$ and $\dfrac{\partial c}{\partial g}$ are discussed.
+
+\subsubsection*{\textrm{j.}}
+
+The expression of GDP:
+
+\begin{equation*}
+    Y=C+G+I+NX
+\end{equation*}
+
+In this model, $I=NX=0$.
+
+\begin{equation*}
+    Y=C+G
+\end{equation*}
+
+Combining equation (2), (4), (7), we have:
+
+\begin{equation*}
+    c+g=AF(k,n)+k
+\end{equation*}
+
+$k$ is given, a larger $g$ shifts the supply of $n$ to the right, thus output $AF(k,n)$ boost, GDP increases.
+
+\subsubsection*{\textrm{k.}}
+
+By increasing $g$, the budget constraint for consumer moves inward. By income effect, the government actually crowds out consumption $c$. Consumer cannot be as happy as before, the utility moves inward as well. In other words, consumer's welfare decreases.
+
+\subsubsection*{\textrm{l.}}
+
+This model predicts that $n$ is procyclical, $c$ is countercyclical. However this prediction doesn't fit the data flawlessly, the data shows that even though $n$ is procyclical, $c$ is procyclical too.
+
+\subsection*{\textrm{3. Changes Govt' Expenditures, graphical representation}}
+
+\subsubsection*{\textrm{a. \& b.}}
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=\textwidth]{figure/1663913232047.jpg.jpg}
+    \end{center}
+    \caption{Equilibrium of Different Govt' Expenditures}
+    \label{fig:graph}
+\end{figure}
+
+The left one is for the 1st equilibrium, part (a). The right represents the 2nd equilibrium, part (b). Note that the absolute value of slope in (b) is larger than that in (a). It is because a decrease in $g$ results in an increase in wage. 
+
+\subsubsection*{\textrm{c.}}
+
+For the budget constraint of the government, $g=t$. So decrease in $g$ reduces $t$. 
+
+Firstly, consumer's budget constraint moves outward parallelly, since the slope $w$ is exogenous for consumer, and change in $g$ increases consumer's income without doing work. But in the new equilibrium, slope $w$ goes up, but income effect still dominates.
+
+Leisure is a normal good for consumer. As $g$ decreases, consumer's income increases. The income effect results in an increase of leisure. Since the maximum time is a constant, the remaining time, that is, time for work, decreases.
+
+As the supply of labor decreases, in a new equilibrium, the demand of labor equals the new supply of demand. The production, which is positively related to $n^{d}$, decreases as well.
+
+Real consumption goes up, because of income effect.
+
+Real output decreases. That is because the real output could be expressed as $AF(k,n)+k$. $g$ goes down, $n$ goes down, $F$ goes down, real output reduces. 
+
+\subsection*{\textbf{Appendix}}
+
+Some other efforts to find derivative w.r.t. $g$.
+
+The consumption is the consumer's choice. Substituting equation (1) with the budget constraint,
+
+$U_{l}\left(wn+D-g, 1-n\right)-wU_{c}\left(wn+D-g, 1-n\right)$
+
+replacing $g$ with $t$. Also, for consumer, $w$ and $D$ are exogenous.
+
+$\dfrac{\partial n}{\partial g}=\dfrac{-\left(-U_{lc}+wU_{cc}\right)}{U_{lc}w-U_{ll}-w\left(U_{cl}w+U_{cl}\left(-1\right)\right)}=\dfrac{U_{lc}-wU_{cc}}{wU_{lc}-U_{ll}-w\left(wU_{cl}-U_{cl}\right)}=\dfrac{U_{lc}-wU_{cc}}{2wU_{lc}-U_{ll}-w^{2}U_{cl}}$
+
+Differentiating budget constraint $c+g-wn-D=0$:
+
+$\dfrac{\partial c}{\partial g}+1-w\dfrac{\partial n}{\partial g}=0\implies\dfrac{\partial c}{\partial g}=w\dfrac{\partial n}{\partial g}-1=\dfrac{wU_{lc}-w^{2}U_{cc}-2wU_{lc}+U_{ll}+w^{2}U_{cl}}{2wU_{lc}-U_{ll}-w^{2}U_{cl}}=\dfrac{-wU_{lc}+U_{ll}}{2wU_{lc}-U_{ll}-w^{2}U_{cl}}$
+
+Since $c$, is a normal good as well, $\dfrac{\partial c}{\partial g}<0$, negative.
+
+If we plug in $U_{cl}=0$, we have:
+
+$\dfrac{\partial c}{\partial g}=\dfrac{0+U_{ll}}{0-U_{ll}-0}=\boxed{-1<0}.$ Negative.
+
+A different perspective of solving this problem: solve the system of equations as a whole.
+
+Because of constant return to scale of production function, we have:
+
+$AF\left(k,n^{d}\right)=AF_{n}\left(k,n^{d}\right)\times n^{d}$
+
+But by (5) we have $AF_{n}\left(k,n^{d}\right)=w$
+
+$\therefore D=AF\left(k,n^{d}\right)-wn^{d}+k=AF_{n}\left(k,n^{d}\right)\times n^{d}-wn^{d}+k=wn^{d}-wn^{d}+k=k$,
+
+which is a constant.
+
+So we focus on consumer's side, because the change of $g$ equals the change in $t$ (by government's budget constraint), which directly has an impact on equation (2).
+
+$c+t=wn+D\implies c+g-wn-D=0$
+
+Take the derivative w.r.t. $g$,\\
+
+$\dfrac{\partial c}{\partial g}+1-\left(\dfrac{\partial w}{\partial g}n+\dfrac{\partial n}{\partial g}w\right)=0\implies\dfrac{\partial c}{\partial g}+1-\dfrac{\partial w}{\partial g}n-\dfrac{\partial n}{\partial g}w=0$
+
+$\implies\dfrac{\partial c}{\partial g}-\dfrac{\partial w}{\partial g}n-\left(\dfrac{\partial n}{\partial g}w-1\right)=0$
+
+Rewriting equation (1), $U_{l}\left(c,l\right)-wU_{c}\left(c,l\right)=0$
+
+Take the derivative w.r.t $g$, \\
+
+$U_{lc}\dfrac{\partial c}{\partial g}+U_{ll}\dfrac{\partial l}{\partial g}-\dfrac{\partial w}{\partial g}U_{c}\left(c,l\right)-w\left(U_{cc}\dfrac{\partial c}{\partial g}+U_{cl}\dfrac{\partial l}{\partial g}\right)=0$
+
+$\implies U_{lc}\dfrac{\partial c}{\partial g}-U_{ll}\dfrac{\partial n}{\partial g}-\dfrac{\partial w}{\partial g}U_{c}\left(c,l\right)-w\left(U_{cc}\dfrac{\partial c}{\partial g}-U_{cl}\dfrac{\partial n}{\partial g}\right)=0$
+
+$\implies U_{lc}\dfrac{\partial c}{\partial g}-U_{ll}\dfrac{\partial n}{\partial g}-\dfrac{\partial w}{\partial g}U_{c}-wU_{cc}\dfrac{\partial c}{\partial g}+wU_{cl}\dfrac{\partial n}{\partial g}=0$
+
+$\implies\dfrac{\partial c}{\partial g}\left(U_{lc}-wU_{cc}\right)-U_{c}\dfrac{\partial w}{\partial g}-\dfrac{\partial n}{\partial g}\left(U_{ll}-wU_{cl}\right)=0 $
+
+$U_{c}\dfrac{\partial c}{\partial g}-nU_{c}\dfrac{\partial w}{\partial g}-\left(wU_{c}\dfrac{\partial n}{\partial g}-U_{c}\right)=0$
+
+$\dfrac{\partial c}{\partial g}\left(U_{lc}-wU_{cc}\right)n-nU_{c}\dfrac{\partial w}{\partial g}-\dfrac{\partial n}{\partial g}\left(U_{ll}-wU_{cl}\right)n=0 $
+
+$\dfrac{\partial c}{\partial g}\left(nU_{lc}-wnU_{cc}-U_{c}\right)-\dfrac{\partial n}{\partial g}\left(nU_{ll}-wnU_{cl}\right)+\left(wU_{c}\dfrac{\partial n}{\partial g}-U_{c}\right)=0$
+
+$\implies \dfrac{\partial c}{\partial g}\left(nU_{lc}-wnU_{cc}-U_{c}\right)=\dfrac{\partial n}{\partial g}\left(nU_{ll}-wnU_{cl}\right)-\left(wU_{c}\dfrac{\partial n}{\partial g}-U_{c}\right)$
+
+$=\dfrac{\partial n}{\partial g}\left(nU_{ll}-wnU_{cl}\right)-wU_{c}\dfrac{\partial n}{\partial g}+U_{c}=\dfrac{\partial n}{\partial g}\left(nU_{ll}-wnU_{cl}-wU_{c}\right)+U_{c}$
+
+Since $w=AF_{n}$, plug in we have
+
+$nU_{ll}-wnU_{cl}-wU_{c}=nU_{ll}-AF_{n}nU_{cl}-AF_{n}U_{c}$
+
+$nU_{lc}-wnU_{cc}-U_{c}=nU_{lc}-AF_{n}nU_{cc}-U_{c}$
+
+$\dfrac{\partial n}{\partial g}=\dfrac{U_{lc}-AF_{n}U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}$
+
+$\implies \dfrac{\partial c}{\partial g}\left(nU_{lc}-AF_{n}nU_{cc}-U_{c}\right)=\dfrac{\left(U_{lc}-AF_{n}U_{cc}\right)\left(nU_{ll}-AF_{n}nU_{cl}-AF_{n}U_{c}\right)}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}+U_{c}$
+
+$\implies \boxed{\dfrac{\partial c}{\partial g}=\dfrac{\dfrac{\left(U_{lc}-AF_{n}U_{cc}\right)\left(nU_{ll}-AF_{n}nU_{cl}-AF_{n}U_{c}\right)}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}+U_{c}}{nU_{lc}-AF_{n}nU_{cc}-U_{c}}}$
+
+Plug in $U_{cl}=0$, we have:
+
+$\boxed{\dfrac{\partial c}{\partial g}=\dfrac{\dfrac{-AF_{n}U_{cc}\left(nU_{ll}-AF_{n}U_{c}\right)}{-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}+U_{c}}{-AF_{n}nU_{cc}-U_{c}}}$
+
+On the other hand, 
+
+$\dfrac{\partial w}{\partial g}n=\dfrac{\partial c}{\partial g}-\dfrac{\partial n}{\partial g}w+1$
+
+$=\dfrac{\dfrac{\left(U_{lc}-AF_{n}U_{cc}\right)\left(nU_{ll}-AF_{n}nU_{cl}-AF_{n}U_{c}\right)}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}+U_{c}}{nU_{lc}-AF_{n}nU_{cc}-U_{c}}-\dfrac{AF_{n}U_{lc}-\left(AF_{n}\right)^2U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}+1$
+
+$=\dfrac{\dfrac{\left(U_{lc}-wU_{cc}\right)\left(nU_{ll}-wnU_{cl}-wU_{c}\right)}{2wU_{lc}-U_{ll}-w^2U_{cc}-wU_{c}}+U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}-\dfrac{wU_{lc}-w^2U_{cc}}{2wU_{lc}-U_{ll}-w^2U_{cc}-AF_{nn}U_{c}}+1$
+
+Or, 
+
+$\dfrac{\partial c}{\partial g}=\dfrac{\dfrac{\partial n}{\partial g}\left(nU_{ll}-wnU_{cl}-wU_{c}\right)+U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}=\dfrac{\partial n}{\partial g}\cdot\dfrac{nU_{ll}-wnU_{cl}-wU_{c}}{nU_{lc}-wnU_{cc}-U_{c}}+\dfrac{U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}$
+
+$\dfrac{\partial w}{\partial g}n=\dfrac{\partial n}{\partial g}\cdot\dfrac{nU_{ll}-wnU_{cl}-wU_{c}}{nU_{lc}-wnU_{cc}-U_{c}}+\dfrac{U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}-\dfrac{\partial n}{\partial g}w+1$
+
+$=\dfrac{\partial n}{\partial g}\left(\dfrac{nU_{ll}-wnU_{cl}-wU_{c}}{nU_{lc}-wnU_{cc}-U_{c}}-w\right)+\dfrac{U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}+1$
+
+$=\dfrac{\partial n}{\partial g}\left(\dfrac{nU_{ll}-wnU_{cl}-wU_{c}}{nU_{lc}-wnU_{cc}-U_{c}}-\dfrac{wnU_{lc}-w^{2}nU_{cc}-wU_{c}}{nU_{lc}-wnU_{cc}-U_{c}}\right)+\dfrac{U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}+\dfrac{nU_{lc}-wnU_{cc}-U_{c}}{nU_{lc}-wnU_{cc}-U_{c}}$
+
+$=\dfrac{\partial n}{\partial g}\cdot\dfrac{nU_{ll}-wnU_{cl}-wU_{c}-wnU_{lc}+w^{2}nU_{cc}+wU_{c}}{nU_{lc}-wnU_{cc}-U_{c}}+\dfrac{nU_{lc}-wnU_{cc}}{nU_{lc}-wnU_{cc}-U_{c}}$
+
+$=\dfrac{\dfrac{\partial n}{\partial g}\left(nU_{ll}-2wnU_{cl}+w^{2}nU_{cc}\right)+nU_{lc}-wnU_{cc}}{nU_{lc}-wnU_{cc}-U_{c}}$
+
+$\implies \dfrac{\partial w}{\partial g}=\dfrac{\dfrac{\partial n}{\partial g}\left(U_{ll}-2wU_{cl}+w^{2}U_{cc}\right)+U_{lc}-wU_{cc}}{nU_{lc}-wnU_{cc}-U_{c}}$
+
+Or, solving system of equations:
+
+$\dfrac{\partial c}{\partial g}-\dfrac{\partial w}{\partial g}n-\left(\dfrac{\partial n}{\partial g}w-1\right)=0$
+
+$\implies \dfrac{\partial c}{\partial g}\left(U_{lc}-wU_{cc}\right)-\dfrac{\partial w}{\partial g}n\left(U_{lc}-wU_{cc}\right)-\left(\dfrac{\partial n}{\partial g}w-1\right)\left(U_{lc}-wU_{cc}\right)=0$
+
+$\because\dfrac{\partial c}{\partial g}\left(U_{lc}-wU_{cc}\right)-U_{c}\dfrac{\partial w}{\partial g}-\dfrac{\partial n}{\partial g}\left(U_{ll}-wU_{cl}\right)=0$
+
+$\therefore-\dfrac{\partial w}{\partial g}n\left(U_{lc}-wU_{cc}\right)-\left(\dfrac{\partial n}{\partial g}w-1\right)\left(U_{lc}-wU_{cc}\right)-\left(-U_{c}\dfrac{\partial w}{\partial g}-\dfrac{\partial n}{\partial g}\left(U_{ll}-wU_{cl}\right)\right)=0$
+
+$\implies\dfrac{\partial w}{\partial g}n\left(wU_{cc}-U_{lc}\right)-\left(\dfrac{\partial n}{\partial g}w-1\right)\left(U_{lc}-wU_{cc}\right)+U_{c}\dfrac{\partial w}{\partial g}+\dfrac{\partial n}{\partial g}\left(U_{ll}-wU_{cl}\right)=0 $
+
+$\implies \dfrac{\partial w}{\partial g}\left(nwU_{cc}-nU_{lc}+U_{c}\right)-\dfrac{\partial n}{\partial g}w\left(U_{lc}-wU_{cc}\right)+\left(U_{lc}-wU_{cc}\right)+\dfrac{\partial n}{\partial g}\left(U_{ll}-wU_{cl}\right)=0$
+
+$\implies \dfrac{\partial w}{\partial g}\left(nwU_{cc}-nU_{lc}+U_{c}\right)+\dfrac{\partial n}{\partial g}\left(-wU_{lc}+w^2U_{cc}+U_{ll}-wU_{cl}\right)+U_{lc}-wU_{cc}=0$
+
+$\implies \dfrac{\partial w}{\partial g}\left(nwU_{cc}-nU_{lc}+U_{c}\right)=\dfrac{\partial n}{\partial g}\left(wU_{lc}-w^2U_{cc}-U_{ll}+wU_{cl}\right)-U_{lc}+wU_{cc}$
+
+$\implies \dfrac{\partial w}{\partial g}=\dfrac{\dfrac{\partial n}{\partial g}\left(2wU_{lc}-w^2U_{cc}-U_{ll}\right)-U_{lc}+wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$\because \dfrac{\partial n}{\partial g}=\dfrac{U_{lc}-AF_{n}U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}=\dfrac{U_{lc}-wU_{cc}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}$
+
+$\therefore \dfrac{\partial w}{\partial g}=\dfrac{\dfrac{\left(U_{lc}-wU_{cc}\right)\left(2wU_{lc}-w^2U_{cc}-U_{ll}\right)}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}-U_{lc}+wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$=\dfrac{\dfrac{\left(U_{lc}-wU_{cc}\right)\left(2wU_{lc}-w^2U_{cc}-U_{ll}\right)}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}-\left(U_{lc}+wU_{cc}\right)}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$=\dfrac{\left(U_{lc}-wU_{cc}\right)\left(\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}-1\right)}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\left(\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}-\dfrac{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}\right)$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\left(\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}-\left(2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}\right)}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}\right)$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}-2wU_{lc}+U_{ll}+w^{2}U_{cc}+AF_{nn}U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\cdot\dfrac{AF_{nn}U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-AF_{nn}U_{c}}$
+
+$\boxed{\dfrac{\partial w}{\partial g}=\dfrac{U_{lc}-AF_{n}U_{cc}}{nAF_{n}U_{cc}-nU_{lc}+U_{c}}\cdot\dfrac{AF_{nn}U_{c}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{nn}\right)^{2}U_{cc}-AF_{nn}U_{c}}}$
+
+Plug in $U_{cl}=0$, we have:
+
+$\dfrac{\partial w}{\partial g}=\dfrac{-AF_{n}U_{cc}}{nAF_{n}U_{cc}+U_{c}}\cdot\dfrac{AF_{nn}U_{c}}{-U_{ll}-\left(AF_{nn}\right)^{2}U_{cc}-AF_{nn}U_{c}}=\boxed{\dfrac{AF_{n}U_{cc}}{nAF_{n}U_{cc}+U_{c}}\cdot\dfrac{AF_{nn}U_{c}}{U_{ll}+\left(AF_{nn}\right)^{2}U_{cc}+AF_{nn}U_{c}}}$
+
+Other attempts:
+
+By combining (1) and (2):
+
+$c+g-\dfrac{U_{l}\left(c,l\right)}{U_{c}\left(c,l\right)}n-D=0$
+
+$\implies\left(c+g-D\right)U_{c}\left(c,l\right)-U_{l}\left(c,l\right)n=0$
+
+Take the derivative w.r.t. $c$:
+
+$U_{c}+\left(c+g-D\right)U_{cc}-nU_{lc}$
+
+Take the derivative w.r.t. $g$:
+
+$U_{c}+\left(c+g-D\right)U_{cl}\dfrac{\partial l}{\partial g}-nU_{ll}\dfrac{\partial l}{\partial g}-U_{l}\dfrac{\partial n}{\partial g}$
+
+$\implies U_{c}-wnU_{cl}\dfrac{\partial n}{\partial g}+nU_{ll}\dfrac{\partial n}{\partial g}-U_{l}\dfrac{\partial n}{\partial g}$
+
+$\implies U_{c}-\left(wnU_{cl}-nU_{ll}+U_{l}\right)\dfrac{\partial n}{\partial g}$
+
+$\therefore \dfrac{\partial c}{\partial g}=\dfrac{U_{c}-\left(wnU_{cl}-nU_{ll}+U_{l}\right)\dfrac{\partial n}{\partial g}}{U_{c}+wnU_{cc}-nU_{lc}}$
+
+If differentiation to $g$:
+
+$\left(\dfrac{\partial c}{\partial g}+1\right)U_{c}+\left(c+g-D\right)\left(U_{cc}\dfrac{\partial c}{\partial g}+U_{cl}\dfrac{\partial l}{\partial g}\right)-\left(\left(U_{lc}\dfrac{\partial c}{\partial g}+U_{ll}\dfrac{\partial l}{\partial g}\right)n+U_{l}\dfrac{\partial n}{\partial g}\right)=0$
+
+$\left(\dfrac{\partial c}{\partial g}+1\right)U_{c}+\left(c+g-D\right)\left(U_{cc}\dfrac{\partial c}{\partial g}-U_{cl}\dfrac{\partial n}{\partial g}\right)-\left(\left(U_{lc}\dfrac{\partial c}{\partial g}-U_{ll}\dfrac{\partial n}{\partial g}\right)n+U_{l}\dfrac{\partial n}{\partial g}\right)=0$
+
+$\implies\dfrac{\partial c}{\partial g}U_{c}+U_{c}+wnU_{cc}\dfrac{\partial c}{\partial g}-wnU_{cl}\dfrac{\partial n}{\partial g}-\left(nU_{lc}\dfrac{\partial c}{\partial g}-nU_{ll}\dfrac{\partial n}{\partial g}+U_{l}\dfrac{\partial n}{\partial g}\right)=0$
+
+$\implies\dfrac{\partial c}{\partial g}U_{c}+U_{c}+wnU_{cc}\dfrac{\partial c}{\partial g}-wnU_{cl}\dfrac{\partial n}{\partial g}-nU_{lc}\dfrac{\partial c}{\partial g}+nU_{ll}\dfrac{\partial n}{\partial g}-U_{l}\dfrac{\partial n}{\partial g}=0$
+
+$\implies\dfrac{\partial c}{\partial g}\left(U_{c}+wnU_{cc}-nU_{lc}\right)+U_{c}-\dfrac{\partial n}{\partial g}\left(wnU_{cl}-nU_{ll}+U_{l}\right)=0$
+
+$\because \dfrac{\partial n}{\partial g}=\dfrac{U_{lc}-AF_{n}U_{cc}}{2AF_{n}U_{lc}-U_{ll}-\left(AF_{n}\right)^2U_{cc}-AF_{nn}U_{c}}=\dfrac{U_{lc}-wU_{cc}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}$
+
+$\therefore \dfrac{\partial w}{\partial g}=\dfrac{\dfrac{\left(U_{lc}-wU_{cc}\right)\left(2wU_{lc}-w^2U_{cc}-U_{ll}\right)}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}-U_{lc}+wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$=\dfrac{\dfrac{\left(U_{lc}-wU_{cc}\right)\left(2wU_{lc}-w^2U_{cc}-U_{ll}\right)}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}-\left(U_{lc}+wU_{cc}\right)}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$=\dfrac{\left(U_{lc}-wU_{cc}\right)\left(\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}-1\right)}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\left(\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}-\dfrac{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}\right)$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\left(\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}-\left(2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}\right)}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}\right)$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\dfrac{2wU_{lc}-w^2U_{cc}-U_{ll}-2wU_{lc}+U_{ll}+w^{2}U_{cc}+\dfrac{\partial w}{\partial g}U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}$
+
+$=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\cdot\dfrac{\dfrac{\partial w}{\partial g}U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}$
+
+$\implies 1=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\cdot\dfrac{U_{c}}{2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}}$
+
+$\implies 2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{\partial w}{\partial g}U_{c}=\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\cdot U_{c}$
+
+$\implies \dfrac{\partial w}{\partial g}U_{c}=2wU_{lc}-U_{ll}-w^{2}U_{cc}-\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}\cdot U_{c}$
+
+$\implies \dfrac{\partial w}{\partial g}=\dfrac{2wU_{lc}-U_{ll}-w^{2}U_{cc}}{U_{c}}-\dfrac{U_{lc}-wU_{cc}}{nwU_{cc}-nU_{lc}+U_{c}}$
+
+
+\end{document}
