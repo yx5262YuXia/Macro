@@ -1,0 +1,25 @@
+Starting Dynare (version 5.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : w
+Equation number 2 : NaN : 2
+Equation number 3 : 0 : 3
+Equation number 4 : 0 : y
+Equation number 5 : 0 : n
+Equation number 6 : 0 : i
+
+

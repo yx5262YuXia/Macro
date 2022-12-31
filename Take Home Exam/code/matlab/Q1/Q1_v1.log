@@ -1,0 +1,113 @@
+Starting Dynare (version 5.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 8 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+c 		 2.08235
+k 		 8.90761
+n 		 1.29143
+r 		 0.0776316
+w 		 1.24941
+y 		 2.30504
+a 		 1
+g 		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+          0.8532           0.8532                0
+             0.9              0.9                0
+             0.9              0.9                0
+           1.234            1.234                0
+       1.449e+17       -1.449e+17                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         8
+  Number of stochastic shocks: 2
+  Number of state variables:   3
+  Number of jumpers:           2
+  Number of static variables:  3
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables          eg        ea
+eg           0.000100  0.000000
+ea           0.000000  0.000100
+
+POLICY AND TRANSITION FUNCTIONS
+                                   c               k               n               r               w               y               a               g
+Constant                    2.082350        8.907613        1.291432        0.077632        1.249410        2.305040        1.000000               0
+k(-1)                       0.106225        0.853182       -0.074615       -0.009240        0.063735       -0.015593               0               0
+a(-1)                       1.140868        2.827546        1.515818        0.133652        0.684521        3.968414        0.900000               0
+g(-1)                      -0.286431        0.126243        0.592129        0.024916       -0.171859        0.739812               0        0.900000
+eg                         -0.318257        0.140270        0.657922        0.027685       -0.190954        0.822014               0        1.000000
+ea                          1.267631        3.141718        1.684242        0.148503        0.760579        4.409349        1.000000               0
+
+
+THEORETICAL MOMENTS (HP filter, lambda = 1600)
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+c              2.0823     0.0231     0.0005
+k              8.9076     0.1160     0.0135
+n              1.2914     0.0227     0.0005
+r              0.0776     0.0020     0.0000
+w              1.2494     0.0139     0.0002
+y              2.3050     0.0571     0.0033
+a              1.0000     0.0128     0.0002
+g              0.0000     0.0128     0.0002
+
+
+
+VARIANCE DECOMPOSITION (in percent) (HP filter, lambda = 1600)
+         eg      ea
+c      2.97   97.03
+k      0.20   99.80
+n     13.51   86.49
+r      3.11   96.89
+w      2.97   97.03
+y      3.40   96.60
+a      0.00  100.00
+g    100.00    0.00
+
+
+
+MATRIX OF CORRELATIONS (HP filter, lambda = 1600)
+Variables          c        k        n        r        w        y        a        g
+c             1.0000   0.8951   0.4645   0.3960   1.0000   0.7775   0.8396  -0.1707
+k             0.8951   1.0000   0.1875   0.0382   0.8951   0.5339   0.5644   0.0252
+n             0.4645   0.1875   1.0000   0.9685   0.4645   0.9180   0.8541   0.3672
+r             0.3960   0.0382   0.9685   1.0000   0.3960   0.8650   0.8313   0.1746
+w             1.0000   0.8951   0.4645   0.3960   1.0000   0.7775   0.8396  -0.1707
+y             0.7775   0.5339   0.9180   0.8650   0.7775   1.0000   0.9824   0.1843
+a             0.8396   0.5644   0.8541   0.8313   0.8396   0.9824   1.0000   0.0000
+g            -0.1707   0.0252   0.3672   0.1746  -0.1707   0.1843   0.0000   1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION (HP filter, lambda = 1600)
+Order           1        2        3        4        5
+c          0.8479   0.6697   0.4840   0.3042   0.1395
+k          0.9417   0.8091   0.6348   0.4434   0.2528
+n          0.6438   0.3666   0.1563   0.0017  -0.1068
+r          0.6442   0.3672   0.1568   0.0022  -0.1064
+w          0.8479   0.6697   0.4840   0.3042   0.1395
+y          0.6849   0.4277   0.2223   0.0626  -0.0572
+a          0.6919   0.4380   0.2335   0.0730  -0.0488
+g          0.6919   0.4380   0.2335   0.0730  -0.0488
+Total computing time : 0h00m15s

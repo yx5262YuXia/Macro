@@ -1,0 +1,86 @@
+Starting Dynare (version 5.2).
+Calling Dynare with arguments: none
+Starting preprocessing of the model file ...
+Found 6 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+STEADY-STATE RESULTS:
+
+c  		 1.17851
+n  		 1.17851
+i  		 0.0526316
+w  		 0.833333
+y  		 1.17851
+pi 		 0
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+         0.01575          0.01575                0
+            2.37             2.37                0
+           25.38            25.38                0
+
+
+There are 2 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition is verified.
+
+
+MODEL SUMMARY
+
+  Number of variables:         6
+  Number of stochastic shocks: 1
+  Number of state variables:   1
+  Number of jumpers:           2
+  Number of static variables:  3
+
+
+MATRIX OF COVARIANCE OF EXOGENOUS SHOCKS
+Variables           e
+e            0.000100
+
+POLICY AND TRANSITION FUNCTIONS
+                                   c               n               i               w               y              pi
+Constant                    1.178511        1.178511        0.052632        0.833333        1.178511               0
+i(-1)                      -0.029034       -0.029034        0.015751       -0.041060       -0.029034       -0.589500
+e                          -0.032260       -0.032260        0.017501       -0.045622       -0.032260       -0.655000
+
+
+THEORETICAL MOMENTS (HP filter, lambda = 1600)
+VARIABLE         MEAN  STD. DEV.   VARIANCE
+c              1.1785     0.0003     0.0000
+n              1.1785     0.0003     0.0000
+i              0.0526     0.0002     0.0000
+w              0.8333     0.0004     0.0000
+y              1.1785     0.0003     0.0000
+pi             0.0000     0.0063     0.0000
+
+
+
+MATRIX OF CORRELATIONS (HP filter, lambda = 1600)
+Variables          c        n        i        w        y       pi
+c             1.0000   1.0000  -1.0000   1.0000   1.0000   1.0000
+n             1.0000   1.0000  -1.0000   1.0000   1.0000   1.0000
+i            -1.0000  -1.0000   1.0000  -1.0000  -1.0000  -1.0000
+w             1.0000   1.0000  -1.0000   1.0000   1.0000   1.0000
+y             1.0000   1.0000  -1.0000   1.0000   1.0000   1.0000
+pi            1.0000   1.0000  -1.0000   1.0000   1.0000   1.0000
+
+
+
+COEFFICIENTS OF AUTOCORRELATION (HP filter, lambda = 1600)
+Order           1        2        3        4        5
+c         -0.0597  -0.0730  -0.0684  -0.0625  -0.0560
+n         -0.0597  -0.0730  -0.0684  -0.0625  -0.0560
+i         -0.0597  -0.0730  -0.0684  -0.0625  -0.0560
+w         -0.0597  -0.0730  -0.0684  -0.0625  -0.0560
+y         -0.0597  -0.0730  -0.0684  -0.0625  -0.0560
+pi        -0.0597  -0.0730  -0.0684  -0.0625  -0.0560
+Total computing time : 0h00m01s
